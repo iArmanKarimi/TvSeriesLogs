@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesRecords", "FilmSeriesRecords\FilmSeriesRecords.csproj", "{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesRecordsDB", "FilmSeriesRecordsDB\FilmSeriesRecordsDB.csproj", "{C463B3D5-23CD-4626-B091-ADAB853B13EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2504508-D86C-4852-8817-67B9F457F4C1}
+	EndGlobalSection
+EndGlobal
