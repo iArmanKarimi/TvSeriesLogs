@@ -28,7 +28,8 @@ namespace FilmSeriesRecords
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+			Application.Run(new EditForm(1));
+			//Application.Run(new MainForm());
 		}
 	}
 }

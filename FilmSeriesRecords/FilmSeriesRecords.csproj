@@ -216,5 +216,14 @@
       <Name>FilmSeriesRecordsDB</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_close_1.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

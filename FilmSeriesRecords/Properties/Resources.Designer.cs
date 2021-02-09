@@ -183,6 +183,26 @@ namespace FilmSeriesRecords.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon icon_save_close {
+            get {
+                object obj = ResourceManager.GetObject("icon_save_close", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon_save_close48 {
+            get {
+                object obj = ResourceManager.GetObject("icon_save_close48", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon icon_scroll_down {
             get {
                 object obj = ResourceManager.GetObject("icon_scroll_down", resourceCulture);
