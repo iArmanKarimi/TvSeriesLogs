@@ -89,9 +89,16 @@ namespace FilmSeriesRecords
 		private void EditSeries(DataGridViewRow row)
 		{
 			int id = (int)row.Cells[ColNames.Id].Value;
-			ComingSoon(); return;
-			if (db.ExistsById(id))
-				new EditForm(id).ShowDialog();
+			var series = db.Get(id);
+			if (!series.IsNull)
+			{
+				var form = new EditForm(series.Value, db);
+				form.ShowDialog();
+				if (form.Saved)
+				{
+					bindingSource[row.Index] = form.Series.AdaptSeries();
+				}
+			}
 			else
 			{
 				MessageBox.Show("Item not found", "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);

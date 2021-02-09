@@ -41,5 +41,33 @@ namespace FilmSeriesRecords
 		public static SeriesAdapted AdaptSeries(this Series series) => new SeriesAdapted(series);
 		public static IEnumerable<SeriesAdapted> AdaptAllSeries(this IEnumerable<Series> series) => 
 			series.Select(item => new SeriesAdapted(item));
+		public static CheckState ToCheckState(this ComboBox comboBox)
+		{
+			switch (comboBox.SelectedIndex)
+			{
+				case 0:
+					return CheckState.Unchecked;
+				case 1:
+					return CheckState.Indeterminate;
+				case 2:
+					return CheckState.Checked;
+				default:
+					return CheckState.Unchecked;
+			}
+		}
+		public static int ToComboBoxItem(this CheckState state)
+		{
+			switch (state)
+			{
+				case CheckState.Unchecked:
+					return 0;
+				case CheckState.Indeterminate:
+					return 1;
+				case CheckState.Checked:
+					return 2;
+				default:
+					return 0;
+			}
+		}
 	}
 }

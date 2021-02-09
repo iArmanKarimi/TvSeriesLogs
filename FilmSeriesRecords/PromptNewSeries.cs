@@ -8,23 +8,7 @@ namespace FilmSeriesRecords
 		internal bool Ok { get; private set; } = false;
 		internal string Title => txtboxName.Text;
 		internal ushort Seasons => (ushort)numericUpDownSeasons.Value;
-		internal CheckState Status
-		{
-			get
-			{
-				switch (comboBoxStatus.SelectedIndex)
-				{
-					case 0:
-						return CheckState.Unchecked;
-					case 1:
-						return CheckState.Indeterminate;
-					case 2:
-						return CheckState.Checked;
-					default:
-						return CheckState.Unchecked;
-				}
-			}
-		}
+		internal CheckState Status => comboBoxStatus.ToCheckState();
 		public PromptNewSeries()
 		{
 			InitializeComponent();

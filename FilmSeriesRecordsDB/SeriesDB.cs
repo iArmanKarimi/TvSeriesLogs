@@ -24,14 +24,23 @@ namespace FilmSeriesRecordsDB
 
 		public Option<Series> Get(int id)
 		{
-			var series = collection.FindOne(i => i.Id == id);
+			var series = collection.FindById(id);
 			return new Option<Series>
 			{
 				Value = series,
 				IsNull = series == null,
 			};
 		}
-		public Series FindOne(Expression<Func<Series, bool>>func) => collection.FindOne(func);
+		public Option<Series> FindOne(Expression<Func<Series, bool>> func)
+		{
+			var series = collection.FindOne(func);
+			return new Option<Series>
+			{
+				Value = series,
+				IsNull = series == null,
+			};
+		}
+
 		/// <returns>Number of items that were removed</returns>
 		public bool Remove(int id) => collection.Delete(id);
 		public int RemoveAll() => collection.DeleteAll();

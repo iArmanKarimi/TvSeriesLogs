@@ -31,28 +31,26 @@ namespace FilmSeriesRecords
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
 			this.label1 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtboxName = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.comboBoxStatus = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.numericUpDownSeasons = new System.Windows.Forms.NumericUpDown();
 			this.btnSubmit = new System.Windows.Forms.Button();
 			this.groupBoxSchedule = new System.Windows.Forms.GroupBox();
-			this.checkBoxInterruptionTime = new System.Windows.Forms.CheckBox();
-			this.checkBoxStartsAt = new System.Windows.Forms.CheckBox();
 			this.dateTimePickerShowStartsAtTime = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePickerShowStartsAtDate = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePickerInterruptionTime = new System.Windows.Forms.DateTimePicker();
-			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDownScheduleEpisode = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDownScheduleSeasons = new System.Windows.Forms.NumericUpDown();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).BeginInit();
 			this.groupBoxSchedule.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleEpisode)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleSeasons)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -64,12 +62,12 @@ namespace FilmSeriesRecords
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Name:";
 			// 
-			// textBox1
+			// txtboxName
 			// 
-			this.textBox1.Location = new System.Drawing.Point(67, 14);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(206, 22);
-			this.textBox1.TabIndex = 1;
+			this.txtboxName.Location = new System.Drawing.Point(67, 14);
+			this.txtboxName.Name = "txtboxName";
+			this.txtboxName.Size = new System.Drawing.Size(280, 22);
+			this.txtboxName.TabIndex = 1;
 			// 
 			// label2
 			// 
@@ -124,49 +122,30 @@ namespace FilmSeriesRecords
 			this.btnSubmit.FlatAppearance.BorderSize = 0;
 			this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
-			this.btnSubmit.Location = new System.Drawing.Point(168, 346);
+			this.btnSubmit.Location = new System.Drawing.Point(148, 346);
 			this.btnSubmit.Name = "btnSubmit";
 			this.btnSubmit.Size = new System.Drawing.Size(63, 52);
 			this.btnSubmit.TabIndex = 11;
 			this.btnSubmit.UseVisualStyleBackColor = true;
+			this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
 			// 
 			// groupBoxSchedule
 			// 
-			this.groupBoxSchedule.Controls.Add(this.checkBoxInterruptionTime);
-			this.groupBoxSchedule.Controls.Add(this.checkBoxStartsAt);
 			this.groupBoxSchedule.Controls.Add(this.dateTimePickerShowStartsAtTime);
 			this.groupBoxSchedule.Controls.Add(this.dateTimePickerShowStartsAtDate);
 			this.groupBoxSchedule.Controls.Add(this.dateTimePickerInterruptionTime);
-			this.groupBoxSchedule.Controls.Add(this.numericUpDown2);
-			this.groupBoxSchedule.Controls.Add(this.numericUpDown1);
+			this.groupBoxSchedule.Controls.Add(this.numericUpDownScheduleEpisode);
+			this.groupBoxSchedule.Controls.Add(this.numericUpDownScheduleSeasons);
 			this.groupBoxSchedule.Controls.Add(this.label7);
 			this.groupBoxSchedule.Controls.Add(this.label6);
 			this.groupBoxSchedule.Controls.Add(this.label5);
 			this.groupBoxSchedule.Controls.Add(this.label4);
 			this.groupBoxSchedule.Location = new System.Drawing.Point(12, 123);
 			this.groupBoxSchedule.Name = "groupBoxSchedule";
-			this.groupBoxSchedule.Size = new System.Drawing.Size(371, 217);
+			this.groupBoxSchedule.Size = new System.Drawing.Size(336, 217);
 			this.groupBoxSchedule.TabIndex = 12;
 			this.groupBoxSchedule.TabStop = false;
 			this.groupBoxSchedule.Text = "Next show schedule";
-			// 
-			// checkBoxInterruptionTime
-			// 
-			this.checkBoxInterruptionTime.AutoSize = true;
-			this.checkBoxInterruptionTime.Location = new System.Drawing.Point(229, 109);
-			this.checkBoxInterruptionTime.Name = "checkBoxInterruptionTime";
-			this.checkBoxInterruptionTime.Size = new System.Drawing.Size(18, 17);
-			this.checkBoxInterruptionTime.TabIndex = 6;
-			this.checkBoxInterruptionTime.UseVisualStyleBackColor = true;
-			// 
-			// checkBoxStartsAt
-			// 
-			this.checkBoxStartsAt.AutoSize = true;
-			this.checkBoxStartsAt.Location = new System.Drawing.Point(329, 149);
-			this.checkBoxStartsAt.Name = "checkBoxStartsAt";
-			this.checkBoxStartsAt.Size = new System.Drawing.Size(18, 17);
-			this.checkBoxStartsAt.TabIndex = 8;
-			this.checkBoxStartsAt.UseVisualStyleBackColor = true;
 			// 
 			// dateTimePickerShowStartsAtTime
 			// 
@@ -176,6 +155,7 @@ namespace FilmSeriesRecords
 			this.dateTimePickerShowStartsAtTime.ShowUpDown = true;
 			this.dateTimePickerShowStartsAtTime.Size = new System.Drawing.Size(139, 22);
 			this.dateTimePickerShowStartsAtTime.TabIndex = 10;
+			this.dateTimePickerShowStartsAtTime.Value = new System.DateTime(2021, 2, 10, 0, 0, 0, 0);
 			// 
 			// dateTimePickerShowStartsAtDate
 			// 
@@ -195,31 +175,31 @@ namespace FilmSeriesRecords
 			this.dateTimePickerInterruptionTime.TabIndex = 7;
 			this.dateTimePickerInterruptionTime.Value = new System.DateTime(2000, 2, 1, 0, 0, 0, 0);
 			// 
-			// numericUpDown2
+			// numericUpDownScheduleEpisode
 			// 
-			this.numericUpDown2.Font = new System.Drawing.Font("Fira Code", 9F);
-			this.numericUpDown2.Location = new System.Drawing.Point(72, 58);
-			this.numericUpDown2.Maximum = new decimal(new int[] {
+			this.numericUpDownScheduleEpisode.Font = new System.Drawing.Font("Fira Code", 9F);
+			this.numericUpDownScheduleEpisode.Location = new System.Drawing.Point(72, 58);
+			this.numericUpDownScheduleEpisode.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
-			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.Size = new System.Drawing.Size(82, 26);
-			this.numericUpDown2.TabIndex = 5;
+			this.numericUpDownScheduleEpisode.Name = "numericUpDownScheduleEpisode";
+			this.numericUpDownScheduleEpisode.Size = new System.Drawing.Size(82, 26);
+			this.numericUpDownScheduleEpisode.TabIndex = 5;
 			// 
-			// numericUpDown1
+			// numericUpDownScheduleSeasons
 			// 
-			this.numericUpDown1.Font = new System.Drawing.Font("Fira Code", 9F);
-			this.numericUpDown1.Location = new System.Drawing.Point(72, 26);
-			this.numericUpDown1.Maximum = new decimal(new int[] {
+			this.numericUpDownScheduleSeasons.Font = new System.Drawing.Font("Fira Code", 9F);
+			this.numericUpDownScheduleSeasons.Location = new System.Drawing.Point(72, 26);
+			this.numericUpDownScheduleSeasons.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(82, 26);
-			this.numericUpDown1.TabIndex = 4;
+			this.numericUpDownScheduleSeasons.Name = "numericUpDownScheduleSeasons";
+			this.numericUpDownScheduleSeasons.Size = new System.Drawing.Size(82, 26);
+			this.numericUpDownScheduleSeasons.TabIndex = 4;
 			// 
 			// label7
 			// 
@@ -261,23 +241,24 @@ namespace FilmSeriesRecords
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(399, 407);
+			this.ClientSize = new System.Drawing.Size(359, 407);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.groupBoxSchedule);
 			this.Controls.Add(this.numericUpDownSeasons);
 			this.Controls.Add(this.btnSubmit);
 			this.Controls.Add(this.comboBoxStatus);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtboxName);
 			this.Controls.Add(this.label1);
 			this.Name = "EditForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Edit";
+			this.Shown += new System.EventHandler(this.EditForm_Shown);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).EndInit();
 			this.groupBoxSchedule.ResumeLayout(false);
 			this.groupBoxSchedule.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleEpisode)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleSeasons)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -286,7 +267,7 @@ namespace FilmSeriesRecords
 		#endregion
 
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtboxName;
 		private System.Windows.Forms.Label label2;
 		internal System.Windows.Forms.ComboBox comboBoxStatus;
 		private System.Windows.Forms.Label label3;
@@ -297,12 +278,10 @@ namespace FilmSeriesRecords
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
-		internal System.Windows.Forms.NumericUpDown numericUpDown1;
-		internal System.Windows.Forms.NumericUpDown numericUpDown2;
+		internal System.Windows.Forms.NumericUpDown numericUpDownScheduleSeasons;
+		internal System.Windows.Forms.NumericUpDown numericUpDownScheduleEpisode;
 		private System.Windows.Forms.DateTimePicker dateTimePickerInterruptionTime;
 		private System.Windows.Forms.DateTimePicker dateTimePickerShowStartsAtDate;
 		private System.Windows.Forms.DateTimePicker dateTimePickerShowStartsAtTime;
-		private System.Windows.Forms.CheckBox checkBoxStartsAt;
-		private System.Windows.Forms.CheckBox checkBoxInterruptionTime;
 	}
 }
