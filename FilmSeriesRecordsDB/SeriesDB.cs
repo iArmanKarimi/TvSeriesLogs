@@ -1,5 +1,5 @@
 ﻿using LiteDB;
-using FilmSeriesRecordsDB.Helper;
+using FilmSeriesRecordsDb.Helper;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
@@ -7,15 +7,15 @@ using System.Collections.Generic;
 
 // Todo
 // Implement filter
-namespace FilmSeriesRecordsDB
+namespace FilmSeriesRecordsDb
 {
-	public class SeriesDB : IDisposable
+	public class SeriesDb : IDisposable
 	{
 		private LiteDatabase db;
 		private ILiteCollection<Series> collection;
 		private const string FILE = "series.db";
 		private const string COLL_SERIES = "series";
-		public SeriesDB()
+		public SeriesDb()
 		{
 			db = new LiteDatabase(FILE);
 			collection = db.GetCollection<Series>(COLL_SERIES);

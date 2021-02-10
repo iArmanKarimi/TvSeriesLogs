@@ -1,4 +1,4 @@
-﻿namespace FilmSeriesRecordsDB
+﻿namespace FilmSeriesRecordsDb
 {
 	public class SeriesDetail
 	{

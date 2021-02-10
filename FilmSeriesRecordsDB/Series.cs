@@ -1,7 +1,7 @@
 ﻿using LiteDB;
-using FilmSeriesRecordsDB.Helper;
+using FilmSeriesRecordsDb.Helper;
 
-namespace FilmSeriesRecordsDB
+namespace FilmSeriesRecordsDb
 {
 	// I don't have the knowledge for notes. it's related to linking the collections I guess.
 	public class SeriesNotes { }

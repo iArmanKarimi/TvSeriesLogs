@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FilmSeriesRecordsDB
+namespace FilmSeriesRecordsDb
 {
 	public class SeriesSchedule
 	{

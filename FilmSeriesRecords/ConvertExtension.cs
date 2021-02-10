@@ -3,8 +3,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using FilmSeriesRecordsDB.Helper;
-using FilmSeriesRecordsDB;
+using FilmSeriesRecordsDb.Helper;
+using FilmSeriesRecordsDb;
 
 namespace FilmSeriesRecords
 {

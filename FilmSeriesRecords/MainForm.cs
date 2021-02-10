@@ -1,4 +1,4 @@
-﻿using FilmSeriesRecordsDB;
+﻿using FilmSeriesRecordsDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +21,7 @@ using System.Windows.Forms;
 	* background color of dataGridView
 	* don't ask for deleting
 	* maybe: give an option to save columns display index. dgvSeriesList.Columns[0].DisplayIndex = 1;
+	* clear all records
  * maybe: add facility to group the series 
  * statistics (e.g. watched, total series, etc) form. put the trigger button in toolstrip 
  */
@@ -28,7 +29,7 @@ namespace FilmSeriesRecords
 {
 	public partial class MainForm : Form
 	{
-		private SeriesDB db;
+		private SeriesDb db;
 		public MainForm()
 		{
 			InitializeComponent();
@@ -42,7 +43,7 @@ namespace FilmSeriesRecords
 		private void Loading(bool on) => lblLoading.Visible = on;
 		private void MainForm_Shown(object sender, EventArgs e)
 		{
-			db = new SeriesDB();
+			db = new SeriesDb();
 			BindAllDbToDgv();
 		}
 		private void TestTimeStatistics()
@@ -94,7 +95,7 @@ namespace FilmSeriesRecords
 			{
 				var form = new EditForm(series.Value, db);
 				form.ShowDialog();
-				if (form.Saved)
+				if (form.Edited)
 				{
 					bindingSource[row.Index] = form.Series.AdaptSeries();
 				}

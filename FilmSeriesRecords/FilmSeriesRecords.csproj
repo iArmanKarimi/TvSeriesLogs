@@ -211,9 +211,9 @@
     <None Include="Resources\icons8_settings_1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FilmSeriesRecordsDB\FilmSeriesRecordsDB.csproj">
+    <ProjectReference Include="..\FilmSeriesRecordsDB\FilmSeriesRecordsDb.csproj">
       <Project>{c463b3d5-23cd-4626-b091-adab853b13ee}</Project>
-      <Name>FilmSeriesRecordsDB</Name>
+      <Name>FilmSeriesRecordsDb</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
