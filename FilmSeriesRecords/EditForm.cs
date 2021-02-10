@@ -9,7 +9,9 @@ using System.Text;
 using System.Windows.Forms;
 
 /* Todo
- * Add an option for interruption & StartsAt inputs to be null (user can choose it not to have any value)
+ * Add an option for interruption & StartsAt inputs to be null (user can choose it not to have any value).
+ * Add a panel for details.
+ * Add textbox in Schedule panel for adding notes on the current episode. Episode note:...
  */
 namespace FilmSeriesRecords
 {
@@ -68,7 +70,7 @@ namespace FilmSeriesRecords
 				time.Hours, time.Minutes, time.Seconds);
 		}
 		#endregion
-		private void btnSubmit_Click(object sender, EventArgs e)
+		private void btnSave_Click(object sender, EventArgs e)
 		{
 			SetDataFromFormToObject();
 			if (db.Update(Series))
@@ -79,6 +81,19 @@ namespace FilmSeriesRecords
 			else
 			{
 				MessageBox.Show("Series wasn't found!", "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+		}
+
+		private void EditForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Control && e.KeyCode == Keys.S)
+			{
+				btnSave.PerformClick();
+				e.Handled = true;
+			}
+			if (e.KeyCode == Keys.Escape)
+			{
+				Close();
 			}
 		}
 	}

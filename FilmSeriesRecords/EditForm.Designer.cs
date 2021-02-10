@@ -36,7 +36,7 @@ namespace FilmSeriesRecords
 			this.comboBoxStatus = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.numericUpDownSeasons = new System.Windows.Forms.NumericUpDown();
-			this.btnSubmit = new System.Windows.Forms.Button();
+			this.btnSave = new System.Windows.Forms.Button();
 			this.groupBoxSchedule = new System.Windows.Forms.GroupBox();
 			this.dateTimePickerShowStartsAtTime = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePickerShowStartsAtDate = new System.Windows.Forms.DateTimePicker();
@@ -119,15 +119,15 @@ namespace FilmSeriesRecords
 			// 
 			// btnSubmit
 			// 
-			this.btnSubmit.FlatAppearance.BorderSize = 0;
-			this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
-			this.btnSubmit.Location = new System.Drawing.Point(148, 346);
-			this.btnSubmit.Name = "btnSubmit";
-			this.btnSubmit.Size = new System.Drawing.Size(63, 52);
-			this.btnSubmit.TabIndex = 11;
-			this.btnSubmit.UseVisualStyleBackColor = true;
-			this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+			this.btnSave.FlatAppearance.BorderSize = 0;
+			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
+			this.btnSave.Location = new System.Drawing.Point(148, 346);
+			this.btnSave.Name = "btnSubmit";
+			this.btnSave.Size = new System.Drawing.Size(63, 52);
+			this.btnSave.TabIndex = 11;
+			this.btnSave.UseVisualStyleBackColor = true;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// groupBoxSchedule
 			// 
@@ -245,15 +245,17 @@ namespace FilmSeriesRecords
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.groupBoxSchedule);
 			this.Controls.Add(this.numericUpDownSeasons);
-			this.Controls.Add(this.btnSubmit);
+			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.comboBoxStatus);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.txtboxName);
 			this.Controls.Add(this.label1);
+			this.KeyPreview = true;
 			this.Name = "EditForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Edit";
 			this.Shown += new System.EventHandler(this.EditForm_Shown);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EditForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).EndInit();
 			this.groupBoxSchedule.ResumeLayout(false);
 			this.groupBoxSchedule.PerformLayout();
@@ -272,7 +274,7 @@ namespace FilmSeriesRecords
 		internal System.Windows.Forms.ComboBox comboBoxStatus;
 		private System.Windows.Forms.Label label3;
 		internal System.Windows.Forms.NumericUpDown numericUpDownSeasons;
-		private System.Windows.Forms.Button btnSubmit;
+		private System.Windows.Forms.Button btnSave;
 		private System.Windows.Forms.GroupBox groupBoxSchedule;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
