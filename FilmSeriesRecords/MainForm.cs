@@ -95,7 +95,7 @@ namespace FilmSeriesRecords
 			{
 				var form = new EditForm(series.Value, db);
 				form.ShowDialog();
-				if (form.Edited)
+				if (form.Saved)
 				{
 					bindingSource[row.Index] = form.Series.AdaptSeries();
 				}
