@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesRecords", "FilmSeriesRecords\FilmSeriesRecords.csproj", "{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesRecordsDB", "FilmSeriesRecordsDB\FilmSeriesRecordsDB.csproj", "{C463B3D5-23CD-4626-B091-ADAB853B13EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesRecordsDb", "FilmSeriesRecordsDB\FilmSeriesRecordsDb.csproj", "{C463B3D5-23CD-4626-B091-ADAB853B13EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesDbNUnitTest", "SeriesDbNUnitTest\SeriesDbNUnitTest.csproj", "{A0132A55-1725-495F-BA95-5B0C6F5A24C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C463B3D5-23CD-4626-B091-ADAB853B13EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0132A55-1725-495F-BA95-5B0C6F5A24C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0132A55-1725-495F-BA95-5B0C6F5A24C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0132A55-1725-495F-BA95-5B0C6F5A24C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0132A55-1725-495F-BA95-5B0C6F5A24C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
