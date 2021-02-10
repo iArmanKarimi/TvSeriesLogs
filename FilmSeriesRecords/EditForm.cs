@@ -1,4 +1,4 @@
-﻿using FilmSeriesRecordsDB;
+﻿using FilmSeriesRecordsDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +17,8 @@ namespace FilmSeriesRecords
 	{
 		public bool Saved;
 		public Series Series { get; }
-		private readonly SeriesDB db;
-		public EditForm(Series series, SeriesDB db)
+		private readonly SeriesDb db;
+		public EditForm(Series series, SeriesDb db)
 		{
 			InitializeComponent();
 			Series = series;
