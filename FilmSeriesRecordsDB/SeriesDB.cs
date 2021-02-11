@@ -22,7 +22,7 @@ namespace FilmSeriesRecordsDb
 			collection.EnsureIndex(c => c.Name);
 		}
 
-		public Option<Series> Get(int id)
+		public Option<Series> FindById(int id)
 		{
 			var series = collection.FindById(id);
 			return new Option<Series>

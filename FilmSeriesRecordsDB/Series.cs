@@ -12,7 +12,7 @@ namespace FilmSeriesRecordsDb
 		public string Name { get; set; }
 		public ushort Seasons { get; set; }
 		public SeenStatus Status { get; set; }
-		public SeriesDetail SeriesDetail { get; set; }
+		public SeriesDetail Detail { get; set; }
 		public SeriesSchedule Schedule { get; set; }
 	}
 }
