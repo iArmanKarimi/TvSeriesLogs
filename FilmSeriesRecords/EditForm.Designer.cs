@@ -29,6 +29,7 @@ namespace FilmSeriesRecords
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtboxName = new System.Windows.Forms.TextBox();
@@ -38,6 +39,7 @@ namespace FilmSeriesRecords
 			this.numericUpDownSeasons = new System.Windows.Forms.NumericUpDown();
 			this.btnSave = new System.Windows.Forms.Button();
 			this.groupBoxSchedule = new System.Windows.Forms.GroupBox();
+			this.btnResetScheduleInterruptionTime = new System.Windows.Forms.Button();
 			this.dateTimePickerShowStartsAtTime = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePickerShowStartsAtDate = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePickerInterruptionTime = new System.Windows.Forms.DateTimePicker();
@@ -47,6 +49,8 @@ namespace FilmSeriesRecords
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.timerAnimateSavedNotification = new System.Windows.Forms.Timer(this.components);
+			this.btnResetScheduleStartsAt = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).BeginInit();
 			this.groupBoxSchedule.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleEpisode)).BeginInit();
@@ -117,13 +121,13 @@ namespace FilmSeriesRecords
 			this.numericUpDownSeasons.Size = new System.Drawing.Size(82, 26);
 			this.numericUpDownSeasons.TabIndex = 3;
 			// 
-			// btnSubmit
+			// btnSave
 			// 
 			this.btnSave.FlatAppearance.BorderSize = 0;
 			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
+			this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
 			this.btnSave.Location = new System.Drawing.Point(148, 346);
-			this.btnSave.Name = "btnSubmit";
+			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(63, 52);
 			this.btnSave.TabIndex = 11;
 			this.btnSave.UseVisualStyleBackColor = true;
@@ -131,6 +135,8 @@ namespace FilmSeriesRecords
 			// 
 			// groupBoxSchedule
 			// 
+			this.groupBoxSchedule.Controls.Add(this.btnResetScheduleStartsAt);
+			this.groupBoxSchedule.Controls.Add(this.btnResetScheduleInterruptionTime);
 			this.groupBoxSchedule.Controls.Add(this.dateTimePickerShowStartsAtTime);
 			this.groupBoxSchedule.Controls.Add(this.dateTimePickerShowStartsAtDate);
 			this.groupBoxSchedule.Controls.Add(this.dateTimePickerInterruptionTime);
@@ -146,6 +152,19 @@ namespace FilmSeriesRecords
 			this.groupBoxSchedule.TabIndex = 12;
 			this.groupBoxSchedule.TabStop = false;
 			this.groupBoxSchedule.Text = "Next show schedule";
+			// 
+			// btnResetScheduleInterruptionTime
+			// 
+			this.btnResetScheduleInterruptionTime.BackColor = System.Drawing.Color.Transparent;
+			this.btnResetScheduleInterruptionTime.FlatAppearance.BorderSize = 0;
+			this.btnResetScheduleInterruptionTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnResetScheduleInterruptionTime.Image = ((System.Drawing.Image)(resources.GetObject("btnResetScheduleInterruptionTime.Image")));
+			this.btnResetScheduleInterruptionTime.Location = new System.Drawing.Point(229, 107);
+			this.btnResetScheduleInterruptionTime.Name = "btnResetScheduleInterruptionTime";
+			this.btnResetScheduleInterruptionTime.Size = new System.Drawing.Size(42, 23);
+			this.btnResetScheduleInterruptionTime.TabIndex = 11;
+			this.btnResetScheduleInterruptionTime.UseVisualStyleBackColor = false;
+			this.btnResetScheduleInterruptionTime.Click += new System.EventHandler(this.btnResetScheduleInterruptionTime_Click);
 			// 
 			// dateTimePickerShowStartsAtTime
 			// 
@@ -237,6 +256,24 @@ namespace FilmSeriesRecords
 			this.label4.TabIndex = 1;
 			this.label4.Text = "Season:";
 			// 
+			// timerAnimateSavedNotification
+			// 
+			this.timerAnimateSavedNotification.Interval = 1000;
+			this.timerAnimateSavedNotification.Tick += new System.EventHandler(this.timerAnimateSavedNotification_Tick);
+			// 
+			// btnResetScheduleStartsAt
+			// 
+			this.btnResetScheduleStartsAt.BackColor = System.Drawing.Color.Transparent;
+			this.btnResetScheduleStartsAt.FlatAppearance.BorderSize = 0;
+			this.btnResetScheduleStartsAt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnResetScheduleStartsAt.Image = ((System.Drawing.Image)(resources.GetObject("btnResetScheduleStartsAt.Image")));
+			this.btnResetScheduleStartsAt.Location = new System.Drawing.Point(214, 174);
+			this.btnResetScheduleStartsAt.Name = "btnResetScheduleStartsAt";
+			this.btnResetScheduleStartsAt.Size = new System.Drawing.Size(42, 23);
+			this.btnResetScheduleStartsAt.TabIndex = 13;
+			this.btnResetScheduleStartsAt.UseVisualStyleBackColor = false;
+			this.btnResetScheduleStartsAt.Click += new System.EventHandler(this.btnResetScheduleStartsAt_Click);
+			// 
 			// EditForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,5 +322,8 @@ namespace FilmSeriesRecords
 		private System.Windows.Forms.DateTimePicker dateTimePickerInterruptionTime;
 		private System.Windows.Forms.DateTimePicker dateTimePickerShowStartsAtDate;
 		private System.Windows.Forms.DateTimePicker dateTimePickerShowStartsAtTime;
+		private System.Windows.Forms.Timer timerAnimateSavedNotification;
+		private System.Windows.Forms.Button btnResetScheduleInterruptionTime;
+		private System.Windows.Forms.Button btnResetScheduleStartsAt;
 	}
 }

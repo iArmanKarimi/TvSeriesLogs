@@ -69,13 +69,16 @@ namespace FilmSeriesRecords
 				date.Year, date.Month, date.Day,
 				time.Hours, time.Minutes, time.Seconds);
 		}
+		private void SetSaveIcon() => btnSave.Image = Properties.Resources.icon_save48.ToBitmap();
+		private void SetSavedIcon() => btnSave.Image = Properties.Resources.icon_save_close48.ToBitmap();
 		#endregion
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			SetDataFromFormToObject();
 			if (db.Update(Series))
 			{
-				MessageBox.Show("Edit has been saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				SetSavedIcon();
+				timerAnimateSavedNotification.Start();
 				Saved = true;
 			}
 			else
@@ -83,18 +86,30 @@ namespace FilmSeriesRecords
 				MessageBox.Show("Series wasn't found!", "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
-
 		private void EditForm_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.Control && e.KeyCode == Keys.S)
 			{
 				btnSave.PerformClick();
 				e.Handled = true;
+				e.SuppressKeyPress = true;
 			}
 			if (e.KeyCode == Keys.Escape)
 			{
 				Close();
 			}
 		}
+		private void timerAnimateSavedNotification_Tick(object sender, EventArgs e)
+		{
+			SetSaveIcon();
+			timerAnimateSavedNotification.Stop();
+		}
+		private void btnResetScheduleStartsAt_Click(object sender, EventArgs e)
+		{
+			dateTimePickerShowStartsAtDate.Value = DateTime.Today;
+			dateTimePickerShowStartsAtTime.Value = DateTime.Today;
+		}
+		private void btnResetScheduleInterruptionTime_Click(object sender, EventArgs e) => 
+			dateTimePickerInterruptionTime.Value = DateTime.Today.Date;
 	}
 }
