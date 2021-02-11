@@ -22,7 +22,7 @@ namespace FilmSeriesRecordsDbTest
 					Status = FilmSeriesRecordsDb.Helper.SeenStatus.Seeing,
 					Seasons = rand(1, 100),
 					Schedule = null,
-					SeriesDetail = null,
+					Detail = null,
 				};
 				db.Add(s);
 				list.Add(s);
@@ -35,24 +35,25 @@ namespace FilmSeriesRecordsDbTest
 		}
 		private ushort rand(ushort min, ushort max) => (ushort)new Random().Next(min, max);
 
-		[SetUp]
-		public void Setup() { }
-
-		public void Filters()
+		[Test]
+		[NonParallelizable]
+		public void Filter()
 		{
-			Filter(true);
-			Filter(false);
+			Filter(true, true);
+			Filter(true, false);
+			Filter(false, true);
+			Filter(false, false);
 		}
 
 		[Test]
 		[Theory]
 		[NonParallelizable]
-		public void Filter(bool sen)
+		public void Filter(bool sen, bool order)
 		{
 			var arg = list[rand(0, 10)];
 			var lim = rand(1, 10);
 			var trimEnd = arg.Name.Substring(0, arg.Name.Length - 5);
-			var filtered = db.Filter(trimEnd, lim, sen);
+			var filtered = db.Filter(trimEnd, lim, sen, order);
 			Assert.GreaterOrEqual(lim, filtered.Count());
 			Assert.IsTrue(filtered.Any(f => f.Id == arg.Id));
 			foreach (var item in filtered)
