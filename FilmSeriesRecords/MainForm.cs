@@ -90,7 +90,7 @@ namespace FilmSeriesRecords
 		private void EditSeries(DataGridViewRow row)
 		{
 			int id = (int)row.Cells[ColNames.Id].Value;
-			var series = db.Get(id);
+			var series = db.FindById(id);
 			if (!series.IsNull)
 			{
 				var form = new EditForm(series.Value, db);
