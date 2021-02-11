@@ -243,5 +243,11 @@
   <ItemGroup>
     <None Include="Resources\icons8_clear_symbol_1.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_star_filled.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
