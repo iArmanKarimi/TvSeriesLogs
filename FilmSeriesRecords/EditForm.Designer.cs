@@ -112,7 +112,7 @@ namespace FilmSeriesRecords
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(322, 50);
+			this.label3.Location = new System.Drawing.Point(335, 51);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(67, 17);
 			this.label3.TabIndex = 8;
@@ -121,7 +121,7 @@ namespace FilmSeriesRecords
 			// numericUpDownSeasons
 			// 
 			this.numericUpDownSeasons.Font = new System.Drawing.Font("Fira Code", 9F);
-			this.numericUpDownSeasons.Location = new System.Drawing.Point(391, 48);
+			this.numericUpDownSeasons.Location = new System.Drawing.Point(404, 49);
 			this.numericUpDownSeasons.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -361,7 +361,7 @@ namespace FilmSeriesRecords
 			this.btnFavorite.FlatAppearance.BorderSize = 0;
 			this.btnFavorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnFavorite.Image = ((System.Drawing.Image)(resources.GetObject("btnFavorite.Image")));
-			this.btnFavorite.Location = new System.Drawing.Point(493, 14);
+			this.btnFavorite.Location = new System.Drawing.Point(493, 20);
 			this.btnFavorite.Name = "btnFavorite";
 			this.btnFavorite.Size = new System.Drawing.Size(47, 48);
 			this.btnFavorite.TabIndex = 15;
@@ -372,7 +372,7 @@ namespace FilmSeriesRecords
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(653, 373);
+			this.ClientSize = new System.Drawing.Size(649, 373);
 			this.Controls.Add(this.btnFavorite);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label3);
@@ -383,9 +383,12 @@ namespace FilmSeriesRecords
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.txtboxName);
 			this.Controls.Add(this.label1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.Icon = global::FilmSeriesRecords.Properties.Resources.icon_edit;
 			this.KeyPreview = true;
 			this.Name = "EditForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Edit";
 			this.Shown += new System.EventHandler(this.EditForm_Shown);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EditForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).EndInit();
