@@ -88,7 +88,7 @@ namespace FilmSeriesRecords
 		}
 		private void EditForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.Control && e.KeyCode == Keys.S)
+			if (e.Modifiers == Keys.Control && e.KeyCode == Keys.S)
 			{
 				btnSave.PerformClick();
 				e.Handled = true;
