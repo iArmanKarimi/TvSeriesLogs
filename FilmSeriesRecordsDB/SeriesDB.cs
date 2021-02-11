@@ -55,20 +55,19 @@ namespace FilmSeriesRecordsDb
 		/// <returns>false if document wasn't found in collection</returns>
 		public bool Update(int id, Series series) => collection.Update(id, series);
 		public IEnumerable<Series> GetAll() => collection.FindAll();
-		public IEnumerable<Series> Filter(string name, ushort limit, bool caseSensitive)
+		public IEnumerable<Series> Filter(string name, ushort limit, bool caseSensitive, bool orderByIndwx = true)
 		{
 			var items = GetAll();
-			var filtered = items
-					.Where(FilterPredicate)
-					.OrderBy(i => i.Name.IndexOf(name))
-					.Take(limit);
+			var filtered = items.Where(FilterPredicate);
+			if (orderByIndwx)
+				filtered = filtered.OrderBy(i => i.Name.IndexOf(name));
 
 			bool FilterPredicate(Series series) =>
 				caseSensitive
 				? series.Name.Contains(name)
 				: series.Name.ToLower().Contains(name.ToLower());
 
-			return filtered;
+			return filtered.Take(limit);
 		}
 		public void Dispose() => db.Dispose();
 	}
