@@ -145,18 +145,34 @@
   </data>
   <data name="btnResetScheduleInterruptionTime.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGCSURBVFhH7ZW7SkNBEIZHBcFbvCCCWFmohZ0IojFioRgv
-        bZ5AC5/DSlEQrG3tfANBiKAmoFHxgpxCbLXUBxhnzmw4J3N2Y4Scyv3hg5x/Zvn37E4S8PLy8nIJszCB
-        81BIjSxMm6ikcAHGMAcfBKbMoYmMROYw8RZrSpNvEyvCORgiM1BNdg62EVf7kj57XNO+AxNN4YvQTUZZ
-        N1jZ28JQzyXEfCby872IL2Wp7W7WrnEg4ZPQTg9nuuiEQ5+uJSioIK4PCMGdePdFxOUu+1oFb6GVpvLE
-        VqzLWj/i640EPlwILPa4ZltjgYduX5sNE57ElQSz/vDmVXgDR9psmJWe6M1ZvAH2bL0O+Apa6AqObcW6
-        8MA9Xkpw/ArYiw/mL8gQFqCNHk510cnGYDRwlXM69k6BP7O4xj22tYpwAyychQ4yirrBSrO/hlXhDGTI
-        vNVNVpr9Q1QVncQIFd51Y0p8mdha0VCOU/FTNafBjolMiv4RR2kjS6mRgykT5eXl9a8F8ANQeiU5AyAb
-        6gAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        dAAAEnQB3mYfeAAAAYJJREFUWEftlbtKQ0EQhkcFwVu8IIJYWaiFnQiiMWKhGC9tnkALn8NKURCsbe18
+        A0GIoCagUfGCnEJstdQHGGfObDgnc3ZjhJzK/eGDnH9m+ffsThLw8vLycgmzMIHzUEiNLEybqKRwAcYw
+        Bx8EpsyhiYxE5jDxFmtKk28TK8I5GCIzUE12DrYRV/uSPntc074DE03hi9BNRlk3WNnbwlDPJcR8JvLz
+        vYgvZantbtaucSDhk9BOD2e66IRDn64lKKggrg8IwZ1490XE5S77WgVvoZWm8sRWrMtaP+LrjQQ+XAgs
+        9rhmW2OBh25fmw0TnsSVBLP+8OZVeANH2myYlZ7ozVm8AfZsvQ74ClroCo5txbrwwD1eSnD8CtiLD+Yv
+        yBAWoI0eTnXRycZgNHCVczr2ToE/s7jGPba1inADLJyFDjKKusFKs7+GVeEMZMi81U1Wmv1DVBWdxAgV
+        3nVjSnyZ2FrRUI5T8VM1p8GOiUyK/hFHaSNLqZGDKRPl5eX1rwXwA1B6JTkDIBvqAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="timerAnimateSavedNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="btnFavorite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        dAAAEnQB3mYfeAAAAq5JREFUWEftVrtuE0EUNYhXRQUdLwnj3Ykt8aqREBIIBBIUlEDDG4kfQFCkAEFH
+        CkARBQkd/AB0ab0PUpEqFMAHICQIBuLocu7s2dn1K9jr2AXiSFeevffcc+fO7M649B/DQBaqmyQ+vJGP
+        44eE5paE3k0+jheyWN6M4p+tYUz3+CCBd0NCX6xF/nW6xwO797Z7TiD0P6mP4dEDHV/LFU/tKsOjhcwd
+        3YCX7wOL/oL9tuPAX9QYaaODBOYKi8PMU4nMM/ccmMukjQZ27wP/Iwui+9pOiau7krFOALG1fhdkvrxd
+        gokj7HyGxdVekILzoMU/Y7mag1xS/g4sZU0i7zxesDuwWXRTx++XnHDemlI3+5ha0rH1deOqRqI1m2hr
+        DVNjagZ2uNIh0GnLMNd9Cvh0FTTWLSdvKz3fFQQugZDv5Du+9yfo4LbU/RMyb3aLlNaR3gGNWY5yNUdz
+        rYbTa6L7i6R3ByZxGsRGLmkawusZ7huaY3MznYZqM7w6JKqcQsKPLNl7PsgkkuLIyYpDyzvJcH/AEp5B
+        Ym4l8M2vsvwplNNyNgzSeTvsXob+UiZmHjPUE+BNZXzkRuY4Q8WAW+9YTvAN3T0BzlvHRy7dxSHvqmUn
+        GHkP6e4JcB45flzeS3dxYP/OOcHQu0C3hdTLW9X4aKGfmeNH3lm6iwP7fi8TnDhofVo49CdhX2mT6UQk
+        Nocs15p3V31DAR29pmDT3gvYBnwh37IiNPVpTDnuMDOvKFMcEFpgkSUUSW/C1H7SMl/CSc+Q95QpBpnb
+        swUi3c73hus2XZXW0zO15aH+sEpYPdAmqN1OYb93kOJg/xskZ0DbilT2kzI4cm+0rsK0XjQM9YS9jJI7
+        gCvX+uUMBAg8wGHyUuKKT1ff0BybG/j36RocENnGYWGshca/jFLpD9V9GiEeKLw3AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

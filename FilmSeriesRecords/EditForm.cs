@@ -19,12 +19,26 @@ namespace FilmSeriesRecords
 	{
 		public bool Saved;
 		public Series Series { get; }
+		private bool _isFavorite;
+		private bool IsFavorite
+		{
+			get => _isFavorite;
+			set
+			{
+				_isFavorite = value;
+				if (value)
+					SetStarFilledIcon();
+				else
+					SetStarIcon();
+			}
+		}
 		private readonly SeriesDb db;
 		public EditForm(Series series, SeriesDb db)
 		{
 			InitializeComponent();
 			Series = series;
 			this.db = db;
+			this.IsFavorite = false;
 		}
 
 		private void EditForm_Shown(object sender, EventArgs e)
@@ -49,6 +63,13 @@ namespace FilmSeriesRecords
 					dateTimePickerShowStartsAtTime.Value = Series.Schedule.WhenNextShowStarts.Value;
 				}
 			}
+			if (Series.Detail != null)
+			{
+				IsFavorite = Series.Detail.IsFavorite;
+				richTextBoxGenres.Text = Series.Detail.Genres;
+				richTextBoxDescription.Text = Series.Detail.Description;
+				numericUpDownTimesWatched.Value = Series.Detail.TimesWatched;
+			}
 		}
 		private void SetDataFromFormToObject()
 		{
@@ -68,9 +89,22 @@ namespace FilmSeriesRecords
 			Series.Schedule.WhenNextShowStarts = new DateTime(
 				date.Year, date.Month, date.Day,
 				time.Hours, time.Minutes, time.Seconds);
+
+			if (Series.Detail == null) Series.Detail = new SeriesDetail();
+
+			Series.Detail.Genres = richTextBoxGenres.Text.Trim();
+			Series.Detail.IsFavorite = IsFavorite;
+			Series.Detail.Description = richTextBoxDescription.Text.Trim();
+			Series.Detail.TimesWatched = (ushort)numericUpDownTimesWatched.Value;
 		}
-		private void SetSaveIcon() => btnSave.Image = Properties.Resources.icon_save48.ToBitmap();
-		private void SetSavedIcon() => btnSave.Image = Properties.Resources.icon_save_close48.ToBitmap();
+		private void SetStarIcon() =>
+			btnFavorite.Image = Properties.Resources.icon_star.ToBitmap();
+		private void SetStarFilledIcon() =>
+			btnFavorite.Image = Properties.Resources.icon_star_filled.ToBitmap();
+		private void SetSaveIcon() =>
+			btnSave.Image = Properties.Resources.icon_save48.ToBitmap();
+		private void SetSavedIcon() =>
+			btnSave.Image = Properties.Resources.icon_save_close48.ToBitmap();
 		#endregion
 		private void btnSave_Click(object sender, EventArgs e)
 		{
@@ -104,12 +138,13 @@ namespace FilmSeriesRecords
 			SetSaveIcon();
 			timerAnimateSavedNotification.Stop();
 		}
+		private void btnFavorite_Click(object sender, EventArgs e) => IsFavorite = !IsFavorite;
 		private void btnResetScheduleStartsAt_Click(object sender, EventArgs e)
 		{
 			dateTimePickerShowStartsAtDate.Value = DateTime.Today;
 			dateTimePickerShowStartsAtTime.Value = DateTime.Today;
 		}
-		private void btnResetScheduleInterruptionTime_Click(object sender, EventArgs e) => 
+		private void btnResetScheduleInterruptionTime_Click(object sender, EventArgs e) =>
 			dateTimePickerInterruptionTime.Value = DateTime.Today.Date;
 	}
 }
