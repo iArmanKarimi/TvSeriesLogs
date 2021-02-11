@@ -118,9 +118,9 @@ namespace FilmSeriesRecords
 		private void InfoOfSeries(DataGridViewRow row)
 		{
 			int id = (int)row.Cells[ColNames.Id].Value;
-			ComingSoon(); return;
-			if (db.ExistsById(id))
-				new InfoForm(id).Show();
+			var series = db.FindById(id);
+			if (!series.IsNull)
+				new InfoForm(series.Value, db).ShowDialog();
 			else
 			{
 				MessageBox.Show("Item was not found!", "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
