@@ -113,6 +113,26 @@ namespace FilmSeriesRecords.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon icon_clear_symbol {
+            get {
+                object obj = ResourceManager.GetObject("icon_clear_symbol", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon_clear_symbol_bw {
+            get {
+                object obj = ResourceManager.GetObject("icon_clear_symbol_bw", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon icon_contact {
             get {
                 object obj = ResourceManager.GetObject("icon_contact", resourceCulture);
@@ -183,6 +203,36 @@ namespace FilmSeriesRecords.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon icon_return {
+            get {
+                object obj = ResourceManager.GetObject("icon_return", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon_return16 {
+            get {
+                object obj = ResourceManager.GetObject("icon_return16", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon_save {
+            get {
+                object obj = ResourceManager.GetObject("icon_save", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon icon_save_close {
             get {
                 object obj = ResourceManager.GetObject("icon_save_close", resourceCulture);
@@ -196,6 +246,16 @@ namespace FilmSeriesRecords.Properties {
         internal static System.Drawing.Icon icon_save_close48 {
             get {
                 object obj = ResourceManager.GetObject("icon_save_close48", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon_save48 {
+            get {
+                object obj = ResourceManager.GetObject("icon_save48", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
