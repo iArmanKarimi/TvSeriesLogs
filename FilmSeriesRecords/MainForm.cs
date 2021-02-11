@@ -9,21 +9,29 @@ using System.Windows.Forms;
 
 /* To do
  * Icon for form title
- * Add ordering functionality. 
+ * Favorites: requires dgv implemented user control 
+ * Ordering functionality. this either requires dgv implemented user control or on the main dgv
 	* add a button in toolstrip that'll show a dialog with:
-		* combo box of items supporting ordering 
+		* combo box of items that support ordering
 		* radio button: ascending/descending
- * Asynchronize updating dgv
- * Create user control for dgv in order to use it in filter form. or embed the filter inside toolstrip and put x to clear filter
+ x Asynchronize updating of dgv
+ * maybe: add fav column to show if the item is favorite
+ * DGV User control: use it in filter form and other required parts.
  * edit form
+	x Implement it
+	* develop UI
  * info form
+	x Implement it
+	* develop UI
  * settings (theme, customize, etc) put the trigger button in toolstrip 
+	* clear all records (ask again firmly)
 	* background color of dataGridView
-	* don't ask for deleting
-	* maybe: give an option to save columns display index. dgvSeriesList.Columns[0].DisplayIndex = 1;
-	* clear all records
- * maybe: add facility to group the series 
- * statistics (e.g. watched, total series, etc) form. put the trigger button in toolstrip 
+	* Other coloring or themes
+	* don't ask for deleting series option
+	* maybe: 
+		* user can change column's order, an option to save that order by using columns display index. 
+			* Ex: dgvSeriesList.Columns[0].DisplayIndex = 1;
+ * statistics (stats) e.g. watched, total series, etc. put the trigger button in toolstrip or in dgv
  */
 namespace FilmSeriesRecords
 {
@@ -33,8 +41,9 @@ namespace FilmSeriesRecords
 		public MainForm()
 		{
 			InitializeComponent();
-			lblLoading.BackColor = dgvSeriesList.BackgroundColor; // transparent loading background
-																  // Init dgv //
+			// transparent loading background
+			lblLoading.BackColor = dgvSeriesList.BackgroundColor;
+			// Init dgv //
 			dgvSeriesList.AutoGenerateColumns = false;
 			var cols = dgvSeriesList.Columns;
 			foreach (DataGridViewColumn col in cols)
