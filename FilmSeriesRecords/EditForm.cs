@@ -131,6 +131,8 @@ namespace FilmSeriesRecords
 			if (e.KeyCode == Keys.Escape)
 			{
 				Close();
+				e.Handled = true;
+				e.SuppressKeyPress = true;
 			}
 		}
 		private void timerAnimateSavedNotification_Tick(object sender, EventArgs e)
