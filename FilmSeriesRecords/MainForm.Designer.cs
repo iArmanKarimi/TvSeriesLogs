@@ -32,7 +32,6 @@ namespace FilmSeriesRecords
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,19 +40,8 @@ namespace FilmSeriesRecords
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvSeriesList = new System.Windows.Forms.DataGridView();
-			this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.toolStrip = new System.Windows.Forms.ToolStrip();
-			this.toolStripBtnAddSeries = new System.Windows.Forms.ToolStripButton();
-			this.toolStripBtnFilter = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripBtnScrollTop = new System.Windows.Forms.ToolStripButton();
-			this.toolStripBtnScrollBottom = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripBtnSettings = new System.Windows.Forms.ToolStripButton();
-			this.lblLoading = new System.Windows.Forms.Label();
 			this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ColumnSeasons = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ColumnSeen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -62,6 +50,19 @@ namespace FilmSeriesRecords
 			this.ColumnInfo = new System.Windows.Forms.DataGridViewImageColumn();
 			this.ColumnNotes = new System.Windows.Forms.DataGridViewImageColumn();
 			this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.toolStrip = new System.Windows.Forms.ToolStrip();
+			this.toolStripBtnAddSeries = new System.Windows.Forms.ToolStripButton();
+			this.toolStripBtnFilter = new System.Windows.Forms.ToolStripButton();
+			this.toolStripBtnFavorites = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripBtnScrollTop = new System.Windows.Forms.ToolStripButton();
+			this.toolStripBtnScrollBottom = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripBtnSettings = new System.Windows.Forms.ToolStripButton();
+			this.lblLoading = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvSeriesList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
 			this.toolStrip.SuspendLayout();
@@ -99,129 +100,6 @@ namespace FilmSeriesRecords
 			this.dgvSeriesList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSeriesList_CellContentClick);
 			this.dgvSeriesList.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridSeriesList_SortCompare);
 			this.dgvSeriesList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvSeriesList_KeyDown);
-			// 
-			// dataGridViewImageColumn1
-			// 
-			this.dataGridViewImageColumn1.FillWeight = 40F;
-			this.dataGridViewImageColumn1.HeaderText = "Delete";
-			this.dataGridViewImageColumn1.MinimumWidth = 60;
-			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-			this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewImageColumn1.ToolTipText = "Delete";
-			this.dataGridViewImageColumn1.Width = 60;
-			// 
-			// dataGridViewImageColumn2
-			// 
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle8.NullValue = null;
-			dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-			this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle8;
-			this.dataGridViewImageColumn2.FillWeight = 35F;
-			this.dataGridViewImageColumn2.HeaderText = "Edit";
-			this.dataGridViewImageColumn2.MinimumWidth = 45;
-			this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-			this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewImageColumn2.ToolTipText = "Edit";
-			this.dataGridViewImageColumn2.Width = 45;
-			// 
-			// toolStrip
-			// 
-			this.toolStrip.BackColor = System.Drawing.SystemColors.Control;
-			this.toolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.toolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
-			this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBtnAddSeries,
-            this.toolStripBtnFilter,
-            this.toolStripSeparator2,
-            this.toolStripBtnScrollTop,
-            this.toolStripBtnScrollBottom,
-            this.toolStripSeparator1,
-            this.toolStripBtnSettings});
-			this.toolStrip.Location = new System.Drawing.Point(0, 320);
-			this.toolStrip.Name = "toolStrip";
-			this.toolStrip.Size = new System.Drawing.Size(570, 39);
-			this.toolStrip.TabIndex = 14;
-			this.toolStrip.Text = "toolStrip1";
-			// 
-			// toolStripBtnAddSeries
-			// 
-			this.toolStripBtnAddSeries.BackColor = System.Drawing.Color.Transparent;
-			this.toolStripBtnAddSeries.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnAddSeries.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.toolStripBtnAddSeries.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAddSeries.Image")));
-			this.toolStripBtnAddSeries.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnAddSeries.Name = "toolStripBtnAddSeries";
-			this.toolStripBtnAddSeries.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnAddSeries.ToolTipText = "Add new series (shortcut: ctrl + n)";
-			this.toolStripBtnAddSeries.Click += new System.EventHandler(this.toolStripBtnAddSeries_Click);
-			// 
-			// toolStripBtnFilter
-			// 
-			this.toolStripBtnFilter.BackColor = System.Drawing.Color.Transparent;
-			this.toolStripBtnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnFilter.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnFilter.Image")));
-			this.toolStripBtnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnFilter.Name = "toolStripBtnFilter";
-			this.toolStripBtnFilter.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnFilter.ToolTipText = "Search (shortcut: ctrl + f or s)";
-			this.toolStripBtnFilter.Visible = false;
-			this.toolStripBtnFilter.Click += new System.EventHandler(this.toolStripBtnFilter_Click);
-			// 
-			// toolStripSeparator2
-			// 
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-			// 
-			// toolStripBtnScrollTop
-			// 
-			this.toolStripBtnScrollTop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnScrollTop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnScrollTop.Image")));
-			this.toolStripBtnScrollTop.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnScrollTop.Name = "toolStripBtnScrollTop";
-			this.toolStripBtnScrollTop.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnScrollTop.Text = "toolStripButton1";
-			this.toolStripBtnScrollTop.ToolTipText = "Scroll to top";
-			this.toolStripBtnScrollTop.Click += new System.EventHandler(this.toolStripBtnScrollTop_Click);
-			// 
-			// toolStripBtnScrollBottom
-			// 
-			this.toolStripBtnScrollBottom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnScrollBottom.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnScrollBottom.Image")));
-			this.toolStripBtnScrollBottom.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnScrollBottom.Name = "toolStripBtnScrollBottom";
-			this.toolStripBtnScrollBottom.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnScrollBottom.Text = "toolStripButton2";
-			this.toolStripBtnScrollBottom.ToolTipText = "Scroll to bottom";
-			this.toolStripBtnScrollBottom.Click += new System.EventHandler(this.toolStripBtnScrollBottom_Click);
-			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-			// 
-			// toolStripBtnSettings
-			// 
-			this.toolStripBtnSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnSettings.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSettings.Image")));
-			this.toolStripBtnSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnSettings.Name = "toolStripBtnSettings";
-			this.toolStripBtnSettings.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnSettings.ToolTipText = "Settings (shortcut: ctrl + p)";
-			this.toolStripBtnSettings.Visible = false;
-			// 
-			// lblLoading
-			// 
-			this.lblLoading.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-			this.lblLoading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lblLoading.Cursor = System.Windows.Forms.Cursors.Default;
-			this.lblLoading.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.lblLoading.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-			this.lblLoading.ForeColor = System.Drawing.Color.Black;
-			this.lblLoading.Location = new System.Drawing.Point(0, 25);
-			this.lblLoading.Name = "lblLoading";
-			this.lblLoading.Size = new System.Drawing.Size(570, 292);
-			this.lblLoading.TabIndex = 15;
-			this.lblLoading.Text = "Loading...";
 			// 
 			// ColumnName
 			// 
@@ -358,6 +236,138 @@ namespace FilmSeriesRecords
 			this.ColumnId.Visible = false;
 			this.ColumnId.Width = 125;
 			// 
+			// dataGridViewImageColumn1
+			// 
+			this.dataGridViewImageColumn1.FillWeight = 40F;
+			this.dataGridViewImageColumn1.HeaderText = "Delete";
+			this.dataGridViewImageColumn1.MinimumWidth = 60;
+			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+			this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewImageColumn1.ToolTipText = "Delete";
+			this.dataGridViewImageColumn1.Width = 60;
+			// 
+			// dataGridViewImageColumn2
+			// 
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle8.NullValue = null;
+			dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle8;
+			this.dataGridViewImageColumn2.FillWeight = 35F;
+			this.dataGridViewImageColumn2.HeaderText = "Edit";
+			this.dataGridViewImageColumn2.MinimumWidth = 45;
+			this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+			this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewImageColumn2.ToolTipText = "Edit";
+			this.dataGridViewImageColumn2.Width = 45;
+			// 
+			// toolStrip
+			// 
+			this.toolStrip.BackColor = System.Drawing.SystemColors.Control;
+			this.toolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.toolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+			this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripBtnAddSeries,
+            this.toolStripBtnFilter,
+            this.toolStripBtnFavorites,
+            this.toolStripSeparator2,
+            this.toolStripBtnScrollTop,
+            this.toolStripBtnScrollBottom,
+            this.toolStripSeparator1,
+            this.toolStripBtnSettings});
+			this.toolStrip.Location = new System.Drawing.Point(0, 320);
+			this.toolStrip.Name = "toolStrip";
+			this.toolStrip.Size = new System.Drawing.Size(570, 39);
+			this.toolStrip.TabIndex = 14;
+			this.toolStrip.Text = "toolStrip1";
+			// 
+			// toolStripBtnAddSeries
+			// 
+			this.toolStripBtnAddSeries.BackColor = System.Drawing.Color.Transparent;
+			this.toolStripBtnAddSeries.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnAddSeries.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.toolStripBtnAddSeries.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAddSeries.Image")));
+			this.toolStripBtnAddSeries.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnAddSeries.Name = "toolStripBtnAddSeries";
+			this.toolStripBtnAddSeries.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnAddSeries.ToolTipText = "Add new series (shortcut: ctrl + n)";
+			this.toolStripBtnAddSeries.Click += new System.EventHandler(this.toolStripBtnAddSeries_Click);
+			// 
+			// toolStripBtnFilter
+			// 
+			this.toolStripBtnFilter.BackColor = System.Drawing.Color.Transparent;
+			this.toolStripBtnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnFilter.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnFilter.Image")));
+			this.toolStripBtnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnFilter.Name = "toolStripBtnFilter";
+			this.toolStripBtnFilter.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnFilter.ToolTipText = "Search (shortcut: ctrl + f or s)";
+			this.toolStripBtnFilter.Visible = false;
+			this.toolStripBtnFilter.Click += new System.EventHandler(this.toolStripBtnFilter_Click);
+			// 
+			// toolStripBtnFavorites
+			// 
+			this.toolStripBtnFavorites.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnFavorites.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnFavorites.Image")));
+			this.toolStripBtnFavorites.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnFavorites.Name = "toolStripBtnFavorites";
+			this.toolStripBtnFavorites.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnFavorites.ToolTipText = "Show favorites";
+			this.toolStripBtnFavorites.Visible = false;
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+			// 
+			// toolStripBtnScrollTop
+			// 
+			this.toolStripBtnScrollTop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnScrollTop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnScrollTop.Image")));
+			this.toolStripBtnScrollTop.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnScrollTop.Name = "toolStripBtnScrollTop";
+			this.toolStripBtnScrollTop.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnScrollTop.ToolTipText = "Scroll to top";
+			this.toolStripBtnScrollTop.Click += new System.EventHandler(this.toolStripBtnScrollTop_Click);
+			// 
+			// toolStripBtnScrollBottom
+			// 
+			this.toolStripBtnScrollBottom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnScrollBottom.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnScrollBottom.Image")));
+			this.toolStripBtnScrollBottom.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnScrollBottom.Name = "toolStripBtnScrollBottom";
+			this.toolStripBtnScrollBottom.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnScrollBottom.ToolTipText = "Scroll to bottom";
+			this.toolStripBtnScrollBottom.Click += new System.EventHandler(this.toolStripBtnScrollBottom_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+			// 
+			// toolStripBtnSettings
+			// 
+			this.toolStripBtnSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnSettings.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSettings.Image")));
+			this.toolStripBtnSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnSettings.Name = "toolStripBtnSettings";
+			this.toolStripBtnSettings.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnSettings.ToolTipText = "Settings (shortcut: ctrl + p)";
+			this.toolStripBtnSettings.Visible = false;
+			// 
+			// lblLoading
+			// 
+			this.lblLoading.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+			this.lblLoading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lblLoading.Cursor = System.Windows.Forms.Cursors.Default;
+			this.lblLoading.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.lblLoading.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.lblLoading.ForeColor = System.Drawing.Color.Black;
+			this.lblLoading.Location = new System.Drawing.Point(0, 25);
+			this.lblLoading.Name = "lblLoading";
+			this.lblLoading.Size = new System.Drawing.Size(570, 292);
+			this.lblLoading.TabIndex = 15;
+			this.lblLoading.Text = "Loading...";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,6 +416,7 @@ namespace FilmSeriesRecords
 		private DataGridViewImageColumn ColumnInfo;
 		private DataGridViewImageColumn ColumnNotes;
 		private DataGridViewTextBoxColumn ColumnId;
+		private ToolStripButton toolStripBtnFavorites;
 	}
 }
 
