@@ -32,15 +32,15 @@ namespace FilmSeriesRecords
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvSeriesList = new System.Windows.Forms.DataGridView();
 			this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -98,6 +98,7 @@ namespace FilmSeriesRecords
 			this.dgvSeriesList.TabIndex = 2;
 			this.dgvSeriesList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSeriesList_CellContentClick);
 			this.dgvSeriesList.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridSeriesList_SortCompare);
+			this.dgvSeriesList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvSeriesList_KeyDown);
 			// 
 			// dataGridViewImageColumn1
 			// 
@@ -111,10 +112,10 @@ namespace FilmSeriesRecords
 			// 
 			// dataGridViewImageColumn2
 			// 
-			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle9.NullValue = null;
-			dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-			this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle8.NullValue = null;
+			dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle8;
 			this.dataGridViewImageColumn2.FillWeight = 35F;
 			this.dataGridViewImageColumn2.HeaderText = "Edit";
 			this.dataGridViewImageColumn2.MinimumWidth = 45;
@@ -225,13 +226,13 @@ namespace FilmSeriesRecords
 			// ColumnName
 			// 
 			this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.Azure;
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Fira Code", 9F);
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnName.DefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Fira Code", 9F);
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.ColumnName.DefaultCellStyle = dataGridViewCellStyle1;
 			this.ColumnName.FillWeight = 91.57754F;
 			this.ColumnName.HeaderText = "Name";
 			this.ColumnName.MinimumWidth = 6;
@@ -241,14 +242,14 @@ namespace FilmSeriesRecords
 			// 
 			// ColumnSeasons
 			// 
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Consolas", 11F);
-			dataGridViewCellStyle11.Format = "N0";
-			dataGridViewCellStyle11.NullValue = "0";
-			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			this.ColumnSeasons.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 11F);
+			dataGridViewCellStyle2.Format = "N0";
+			dataGridViewCellStyle2.NullValue = "0";
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			this.ColumnSeasons.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ColumnSeasons.FillWeight = 30F;
 			this.ColumnSeasons.HeaderText = "Seasons";
 			this.ColumnSeasons.MaxInputLength = 5;
@@ -261,12 +262,12 @@ namespace FilmSeriesRecords
 			// 
 			// ColumnSeen
 			// 
-			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			dataGridViewCellStyle12.NullValue = System.Windows.Forms.CheckState.Indeterminate;
-			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-			this.ColumnSeen.DefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			dataGridViewCellStyle3.NullValue = System.Windows.Forms.CheckState.Indeterminate;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			this.ColumnSeen.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ColumnSeen.FalseValue = "0";
 			this.ColumnSeen.FillWeight = 35F;
 			this.ColumnSeen.HeaderText = "Seen";
@@ -283,11 +284,11 @@ namespace FilmSeriesRecords
 			// 
 			// ColumnDelete
 			// 
-			dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			dataGridViewCellStyle13.NullValue = null;
-			dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.MistyRose;
-			this.ColumnDelete.DefaultCellStyle = dataGridViewCellStyle13;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			dataGridViewCellStyle4.NullValue = null;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MistyRose;
+			this.ColumnDelete.DefaultCellStyle = dataGridViewCellStyle4;
 			this.ColumnDelete.FillWeight = 40F;
 			this.ColumnDelete.HeaderText = "Del";
 			this.ColumnDelete.Image = ((System.Drawing.Image)(resources.GetObject("ColumnDelete.Image")));
@@ -295,18 +296,18 @@ namespace FilmSeriesRecords
 			this.ColumnDelete.Name = "ColumnDelete";
 			this.ColumnDelete.ReadOnly = true;
 			this.ColumnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnDelete.ToolTipText = "Delete";
+			this.ColumnDelete.ToolTipText = "Delete (shortcut: delete)";
 			this.ColumnDelete.Width = 40;
 			// 
 			// ColumnEdit
 			// 
-			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle14.BackColor = System.Drawing.Color.PapayaWhip;
-			dataGridViewCellStyle14.NullValue = null;
-			dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.NavajoWhite;
-			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-			this.ColumnEdit.DefaultCellStyle = dataGridViewCellStyle14;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.PapayaWhip;
+			dataGridViewCellStyle5.NullValue = null;
+			dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.NavajoWhite;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+			this.ColumnEdit.DefaultCellStyle = dataGridViewCellStyle5;
 			this.ColumnEdit.FillWeight = 35F;
 			this.ColumnEdit.HeaderText = "Edit";
 			this.ColumnEdit.Image = ((System.Drawing.Image)(resources.GetObject("ColumnEdit.Image")));
@@ -314,23 +315,23 @@ namespace FilmSeriesRecords
 			this.ColumnEdit.Name = "ColumnEdit";
 			this.ColumnEdit.ReadOnly = true;
 			this.ColumnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnEdit.ToolTipText = "Edit";
+			this.ColumnEdit.ToolTipText = "Edit (shortcut: e)";
 			this.ColumnEdit.Width = 45;
 			// 
 			// ColumnInfo
 			// 
-			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle15.NullValue = null;
-			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(255)))));
-			this.ColumnInfo.DefaultCellStyle = dataGridViewCellStyle15;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle6.NullValue = null;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(255)))));
+			this.ColumnInfo.DefaultCellStyle = dataGridViewCellStyle6;
 			this.ColumnInfo.HeaderText = "Info";
 			this.ColumnInfo.Image = ((System.Drawing.Image)(resources.GetObject("ColumnInfo.Image")));
 			this.ColumnInfo.MinimumWidth = 40;
 			this.ColumnInfo.Name = "ColumnInfo";
 			this.ColumnInfo.ReadOnly = true;
 			this.ColumnInfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnInfo.ToolTipText = "Information about series";
+			this.ColumnInfo.ToolTipText = "Information (shortcut: i)";
 			this.ColumnInfo.Width = 40;
 			// 
 			// ColumnNotes
@@ -346,9 +347,9 @@ namespace FilmSeriesRecords
 			// 
 			// ColumnId
 			// 
-			dataGridViewCellStyle16.Format = "N0";
-			dataGridViewCellStyle16.NullValue = null;
-			this.ColumnId.DefaultCellStyle = dataGridViewCellStyle16;
+			dataGridViewCellStyle7.Format = "N0";
+			dataGridViewCellStyle7.NullValue = null;
+			this.ColumnId.DefaultCellStyle = dataGridViewCellStyle7;
 			this.ColumnId.HeaderText = "Id";
 			this.ColumnId.MaxInputLength = 100;
 			this.ColumnId.MinimumWidth = 6;

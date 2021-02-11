@@ -71,7 +71,7 @@ namespace FilmSeriesRecords
 				$"sum: {fetchTime + adaption + bindDGV} ms";
 			MessageBox.Show(result, "Result of time");
 		}
-		
+
 		#region Helper UI
 		struct ColNames
 		{
@@ -196,6 +196,27 @@ namespace FilmSeriesRecords
 					else if (cols[ColNames.Notes].Index == e.ColumnIndex)
 						NotesOfSeries(row);
 				}
+			}
+		}
+		private void dgvSeriesList_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (dgvSeriesList.SelectedCells.Count < 1) return;
+			var cell = dgvSeriesList.SelectedCells[0];
+			var row = dgvSeriesList.Rows[cell.RowIndex];
+			if (e.KeyCode == Keys.Delete)
+			{
+				DeleteSeries(row);
+				e.Handled = true;
+			}
+			if (e.KeyCode == Keys.E)
+			{
+				EditSeries(row);
+				e.Handled = true;
+			}
+			if (e.KeyCode == Keys.I)
+			{
+				InfoOfSeries(row);
+				e.Handled = true;
 			}
 		}
 		#endregion
