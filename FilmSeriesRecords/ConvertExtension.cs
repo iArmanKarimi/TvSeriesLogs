@@ -69,5 +69,19 @@ namespace FilmSeriesRecords
 					return 0;
 			}
 		}
+		public static string ToFormString(this SeenStatus status)
+		{
+			switch (status)
+			{
+				case SeenStatus.NotSeen:
+					return "Haven't watched";
+				case SeenStatus.Seeing:
+					return "Watching";
+				case SeenStatus.Seen:
+					return "Watched";
+				default:
+					return "Haven't watched";
+			}
+		}
 	}
 }
