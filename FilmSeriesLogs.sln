@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesLogs", "FilmSeriesRecords\FilmSeriesLogs.csproj", "{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesLogs", "FilmSeriesLogs\FilmSeriesLogs.csproj", "{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesLogsDb", "FilmSeriesRecordsDB\FilmSeriesLogsDb.csproj", "{C463B3D5-23CD-4626-B091-ADAB853B13EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmSeriesLogsDb", "FilmSeriesLogsDB\FilmSeriesLogsDb.csproj", "{C463B3D5-23CD-4626-B091-ADAB853B13EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmSeriesLogsDbTest", "FilmSeriesRecordsDbTest\FilmSeriesLogsDbTest.csproj", "{D4261695-2805-4732-9CA2-27F383237989}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmSeriesLogsDbTest", "FilmSeriesLogsDbTest\FilmSeriesLogsDbTest.csproj", "{D4261695-2805-4732-9CA2-27F383237989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
