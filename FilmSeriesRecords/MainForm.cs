@@ -7,32 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/* To do
- * Icon for form title
- * Favorites: requires dgv implemented user control 
- * Ordering functionality. this either requires dgv implemented user control or on the main dgv
-	* add a button in toolstrip that'll show a dialog with:
-		* combo box of items that support ordering
-		* radio button: ascending/descending
- x Asynchronize updating of dgv
- * maybe: add fav column to show if the item is favorite
- * DGV User control: use it in filter form and other required parts.
- * edit form
-	x Implement it
-	* develop UI
- * info form
-	x Implement it
-	* develop UI
- * settings (theme, customize, etc) put the trigger button in toolstrip 
-	* clear all records (ask again firmly)
-	* background color of dataGridView
-	* Other coloring or themes
-	* don't ask for deleting series option
-	* maybe: 
-		* user can change column's order, an option to save that order by using columns display index. 
-			* Ex: dgvSeriesList.Columns[0].DisplayIndex = 1;
- * statistics (stats) e.g. watched, total series, etc. put the trigger button in toolstrip or in dgv
- */
 namespace FilmSeriesRecords
 {
 	public partial class MainForm : Form
