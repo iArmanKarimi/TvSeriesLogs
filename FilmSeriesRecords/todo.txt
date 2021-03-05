@@ -1,4 +1,4 @@
-﻿/* To do
+﻿/* Todo
  * Icon for form title
  * Favorites: requires dgv implemented user control 
  * Ordering functionality. this either requires dgv implemented user control or on the main dgv
@@ -24,4 +24,10 @@
 		* user can change column's order, an option to save that order by using columns display index. 
 			* Ex: dgvSeriesList.Columns[0].DisplayIndex = 1;
  * statistics (stats) e.g. watched, total series, etc. put the trigger button in toolstrip or in dgv
+ */
+
+/* Todo EditForm
+ * Add an option for interruption & StartsAt inputs to be null (user can choose it not to have any value).
+ * Add a panel for details.
+ * Add textbox in Schedule panel for adding notes on the current episode. Episode note:... 
  */

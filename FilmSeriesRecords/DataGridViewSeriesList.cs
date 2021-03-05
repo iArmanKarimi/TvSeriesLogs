@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	public partial class DataGridViewSeriesList : UserControl
 	{

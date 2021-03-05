@@ -1,4 +1,4 @@
-﻿namespace FilmSeriesRecordsDb.Helper
+﻿namespace FilmSeriesLogsDb.Helper
 {
 	public enum SeenStatus
 	{

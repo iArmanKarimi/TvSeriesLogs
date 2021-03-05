@@ -1,19 +1,8 @@
-﻿using FilmSeriesRecordsDb;
+﻿using FilmSeriesLogsDb;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-/* Todo
- * Add an option for interruption & StartsAt inputs to be null (user can choose it not to have any value).
- * Add a panel for details.
- * Add textbox in Schedule panel for adding notes on the current episode. Episode note:...
- */
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	public partial class EditForm : Form
 	{

@@ -1,10 +1,10 @@
-using FilmSeriesRecordsDb;
+using FilmSeriesLogsDb;
 using NUnit.Framework;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace FilmSeriesRecordsDbTest
+namespace FilmSeriesLogsDbTest
 {
 	[TestFixture]
 	public class SeriesDbTests
@@ -19,7 +19,7 @@ namespace FilmSeriesRecordsDbTest
 				var s = new Series
 				{
 					Name = $"Test{(i + rand(byte.MinValue, ushort.MaxValue))}{new string('*', 6)}",
-					Status = FilmSeriesRecordsDb.Helper.SeenStatus.Seeing,
+					Status = FilmSeriesLogsDb.Helper.SeenStatus.Seeing,
 					Seasons = rand(1, 100),
 					Schedule = null,
 					Detail = null,

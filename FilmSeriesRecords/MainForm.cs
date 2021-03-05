@@ -1,13 +1,9 @@
-﻿using FilmSeriesRecordsDb;
+﻿using FilmSeriesLogsDb;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	public partial class MainForm : Form
 	{

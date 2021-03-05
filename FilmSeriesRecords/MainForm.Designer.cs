@@ -1,7 +1,7 @@
 ﻿
 using System.Windows.Forms;
 
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	partial class MainForm
 	{

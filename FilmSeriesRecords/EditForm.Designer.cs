@@ -1,5 +1,5 @@
 ﻿
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	partial class EditForm
 	{
@@ -384,7 +384,7 @@ namespace FilmSeriesRecords
 			this.Controls.Add(this.txtboxName);
 			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Icon = global::FilmSeriesRecords.Properties.Resources.icon_edit;
+			this.Icon = global::FilmSeriesLogs.Properties.Resources.icon_edit;
 			this.KeyPreview = true;
 			this.Name = "EditForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

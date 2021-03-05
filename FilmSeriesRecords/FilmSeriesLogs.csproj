@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{66BBBA50-810D-43E0-9B70-E5A0289AF4A3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FilmSeriesRecords</RootNamespace>
-    <AssemblyName>FilmSeriesRecords</AssemblyName>
+    <RootNamespace>FilmSeriesLogs</RootNamespace>
+    <AssemblyName>FilmSeriesLogs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -211,9 +211,9 @@
     <None Include="Resources\icons8_settings_1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FilmSeriesRecordsDB\FilmSeriesRecordsDb.csproj">
+    <ProjectReference Include="..\FilmSeriesRecordsDB\FilmSeriesLogsDb.csproj">
       <Project>{c463b3d5-23cd-4626-b091-adab853b13ee}</Project>
-      <Name>FilmSeriesRecordsDb</Name>
+      <Name>FilmSeriesLogsDb</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

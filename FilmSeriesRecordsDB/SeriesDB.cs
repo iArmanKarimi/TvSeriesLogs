@@ -1,13 +1,11 @@
 ﻿using LiteDB;
-using FilmSeriesRecordsDb.Helper;
+using FilmSeriesLogsDb.Helper;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 
-// Todo
-// Implement filter
-namespace FilmSeriesRecordsDb
+namespace FilmSeriesLogsDb
 {
 	public class SeriesDb : IDisposable
 	{

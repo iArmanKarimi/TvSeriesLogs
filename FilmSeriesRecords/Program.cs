@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	static class Program
 	{

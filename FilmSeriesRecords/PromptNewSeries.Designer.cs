@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	partial class PromptNewSeries
 	{

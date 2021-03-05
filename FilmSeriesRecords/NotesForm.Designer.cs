@@ -1,5 +1,5 @@
 ﻿
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	partial class NotesForm
 	{

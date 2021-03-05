@@ -3,10 +3,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using FilmSeriesRecordsDb.Helper;
-using FilmSeriesRecordsDb;
+using FilmSeriesLogsDb.Helper;
+using FilmSeriesLogsDb;
 
-namespace FilmSeriesRecords
+namespace FilmSeriesLogs
 {
 	public static class ConvertExtension
 	{
