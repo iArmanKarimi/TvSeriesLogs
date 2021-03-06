@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -172,9 +176,6 @@
     <None Include="Resources\icons8_info.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\833.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_add_2.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -215,9 +216,6 @@
       <Project>{c463b3d5-23cd-4626-b091-adab853b13ee}</Project>
       <Name>FilmSeriesLogsDb</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_ok_3.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_save_close.ico" />
