@@ -5,7 +5,6 @@ namespace FilmSeriesLogs
 {
 	public partial class PromptNewSeries : Form
 	{
-		internal bool Ok { get; private set; } = false;
 		internal string Title => txtboxName.Text;
 		internal ushort Seasons => (ushort)numericUpDownSeasons.Value;
 		internal CheckState Status => comboBoxStatus.ToCheckState();
@@ -20,7 +19,7 @@ namespace FilmSeriesLogs
 		{
 			if (!string.IsNullOrEmpty(txtboxName.Text) && !string.IsNullOrWhiteSpace(txtboxName.Text))
 			{
-				Ok = true;
+				DialogResult = DialogResult.OK;
 				txtboxName.Text.Trim();
 				Close();
 			}
@@ -46,7 +45,7 @@ namespace FilmSeriesLogs
 		{
 			if (e.KeyCode == Keys.Escape)
 			{
-				Ok = false;
+				DialogResult = DialogResult.Cancel;
 				Close();
 			}
 		}

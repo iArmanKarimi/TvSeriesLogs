@@ -247,8 +247,8 @@ namespace FilmSeriesLogs
 		{
 			var prompt = new PromptNewSeries();
 			prompt.ShowDialog();
-			if (prompt.Ok)
-				AddNewSeries(new Series
+			if (prompt.DialogResult == DialogResult.OK)
+				userControlDGV.AddNewSeries(new Series
 				{
 					Name = prompt.Title,
 					Status = prompt.Status.ToSeenState(),
