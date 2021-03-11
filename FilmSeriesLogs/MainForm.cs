@@ -7,23 +7,17 @@ namespace FilmSeriesLogs
 {
 	public partial class MainForm : Form
 	{
-		private SeriesDb db;
+		private readonly SeriesDb db;
 		public MainForm()
 		{
+			db = new SeriesDb();
 			InitializeComponent();
-			// transparent loading background
-			lblLoading.BackColor = dgvSeriesList.BackgroundColor;
-			// Init dgv //
-			dgvSeriesList.AutoGenerateColumns = false;
-			var cols = dgvSeriesList.Columns;
-			foreach (DataGridViewColumn col in cols)
-				col.DataPropertyName = col.HeaderText;
 		}
-		private void Loading(bool on) => lblLoading.Visible = on;
+		//private void Loading(bool on) => lblLoading.Visible = on;
 		private void MainForm_Shown(object sender, EventArgs e)
 		{
-			db = new SeriesDb();
-			BindAllDbToDgv();
+			userControlDGV.OnFormShown(db);
+			userControlDGV.BindAllDbToDgv();
 		}
 		private void TestTimeStatistics()
 		{
@@ -51,154 +45,6 @@ namespace FilmSeriesLogs
 			MessageBox.Show(result, "Result of time");
 		}
 
-		#region Helper UI
-		struct ColNames
-		{
-			private const string c = "Column";
-			public const string Id = c + "Id";
-			public const string Name = c + "Name";
-			public const string Seen = c + "Seen";
-			public const string Edit = c + "Edit";
-			public const string Info = c + "Info";
-			public const string Notes = c + "Notes";
-			public const string Delete = c + "Delete";
-			public const string Seasons = c + "Seasons";
-		}
-		private static void ComingSoon() =>
-						MessageBox.Show("Coming soon!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-		private void EditSeries(DataGridViewRow row)
-		{
-			int id = (int)row.Cells[ColNames.Id].Value;
-			var series = db.FindById(id);
-			if (!series.IsNull)
-			{
-				var form = new EditForm(series.Value, db);
-				form.ShowDialog();
-				if (form.Saved)
-				{
-					bindingSource[row.Index] = form.Series.AdaptSeries();
-				}
-			}
-			else
-			{
-				MessageBox.Show("Item not found", "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				bindingSource.RemoveAt(row.Index);
-			}
-		}
-		private void InfoOfSeries(DataGridViewRow row)
-		{
-			int id = (int)row.Cells[ColNames.Id].Value;
-			var series = db.FindById(id);
-			if (!series.IsNull)
-				new InfoForm(series.Value, db).ShowDialog();
-			else
-			{
-				MessageBox.Show("Item was not found!", "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				bindingSource.RemoveAt(row.Index);
-			}
-		}
-		private void DeleteSeries(DataGridViewRow row)
-		{
-			if (MessageBox.Show("Are you sure you want to delete this series?", string.Empty,
-					MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-			{
-				bool wasRemoved = db.Remove((int)row.Cells[ColNames.Id].Value);
-				if (!wasRemoved)
-					MessageBox.Show("Couldn't delete the selected item!", "Warning",
-						MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				else
-					bindingSource.RemoveAt(row.Index);
-			}
-		}
-		private void NotesOfSeries(DataGridViewRow row) => ComingSoon();
-		private void AddNewSeries(Series series)
-		{
-			bool existsExcludingId = db.Exists(s =>
-				s.Name == series.Name &&
-				s.Status == series.Status &&
-				s.Seasons == series.Seasons
-			);
-			if (existsExcludingId)
-			{
-				if (MessageBox.Show("Another item with this specifications already exists.\n" +
-						"Do you still want to add a new one?", "Duplicated",
-						MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-					return;
-			}
-			else if (db.Exists(s => s.Name == series.Name))
-				if (MessageBox.Show("Another item with this name already exists.\n" +
-						"Do you still want to add a new one?", "Duplicated",
-						MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-					return;
-
-			int id = db.Add(series);
-			series.Id = id;
-			bindingSource.Add(series.AdaptSeries());
-		}
-		private void BindAllDbToDgv()
-		{
-			Loading(true);
-			Update();
-			dgvSeriesList.BeginInvoke(new MethodInvoker(() =>
-			{
-				var data = db.GetAll();
-				if (data.Count() > 0)
-					bindingSource.DataSource = data.AdaptAllSeries();
-			}));
-			Loading(false);
-		}
-		#endregion
-		#region Events of DataGridViewSeriesList 
-		private void dataGridSeriesList_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
-		{
-			if (dgvSeriesList.Columns[ColNames.Seasons].Index == e.Column.Index)
-			{
-				e.SortResult = int.Parse(e.CellValue1.ToString()).CompareTo(int.Parse(e.CellValue2.ToString()));
-				e.Handled = true;
-			}
-		}
-		private void dataGridSeriesList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			var cols = (sender as DataGridView).Columns;
-
-			if (e.RowIndex > -1)
-			{
-				if (cols[e.ColumnIndex] is DataGridViewImageColumn)
-				{
-					var row = dgvSeriesList.Rows[e.RowIndex];
-					if (cols[ColNames.Edit].Index == e.ColumnIndex)
-						EditSeries(row);
-					else if (cols[ColNames.Info].Index == e.ColumnIndex)
-						InfoOfSeries(row);
-					else if (cols[ColNames.Delete].Index == e.ColumnIndex)
-						DeleteSeries(row);
-					else if (cols[ColNames.Notes].Index == e.ColumnIndex)
-						NotesOfSeries(row);
-				}
-			}
-		}
-		private void dgvSeriesList_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (dgvSeriesList.SelectedCells.Count < 1) return;
-			var cell = dgvSeriesList.SelectedCells[0];
-			var row = dgvSeriesList.Rows[cell.RowIndex];
-			if (e.KeyCode == Keys.Delete)
-			{
-				DeleteSeries(row);
-				e.Handled = true;
-			}
-			if (e.KeyCode == Keys.E)
-			{
-				EditSeries(row);
-				e.Handled = true;
-			}
-			if (e.KeyCode == Keys.I)
-			{
-				InfoOfSeries(row);
-				e.Handled = true;
-			}
-		}
-		#endregion
 		private void MainForm_KeyDown(object sender, KeyEventArgs e)
 		{
 			// search 
@@ -219,29 +65,26 @@ namespace FilmSeriesLogs
 				//btnSettings.PerformClick();
 				e.Handled = true;
 			}
+			// exit
+			if (e.Control && e.KeyCode == Keys.W)
+			{
+				Close();
+				e.Handled = true;
+			}
 		}
-		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			db.Dispose();
-		}
+		private void MainForm_FormClosed(object sender, FormClosedEventArgs e) => db.Dispose();
 		private void MainForm_SizeChanged(object sender, EventArgs e)
 		{
-			// Responsive dgv
-			dgvSeriesList.Size = new System.Drawing.Size(dgvSeriesList.Size.Width, toolStrip.Location.Y);
+			// Responsive dgv UI // 
+			userControlDGV.Size = new System.Drawing.Size(userControlDGV.Size.Width, toolStrip.Location.Y);
 		}
-		private void btnSettings_Click(object sender, EventArgs e) => ComingSoon();
+		private void btnSettings_Click(object sender, EventArgs e) => new NotImplementedException();
 		private void toolStripBtnFilter_Click(object sender, EventArgs e)
 		{
-			var fp = new FilterForm();
-			fp.ShowDialog();
-			if (fp.Ok)
-			{
-				var filtered = db.Filter(fp.SeriesName, fp.Limit, fp.CaseSensitive);
-				if (filtered.Count() >= 1)
-					new FilteredForm(filtered.AdaptAllSeries()).ShowDialog();
-				else
-					MessageBox.Show("No items were found!", "No results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			}
+			var prompt = new FilterPrompt(db);
+			prompt.ShowDialog();
+			if (prompt.DialogResult == DialogResult.OK)
+				prompt.ShowFilteredForm();
 		}
 		private void toolStripBtnAddSeries_Click(object sender, EventArgs e)
 		{
@@ -255,16 +98,7 @@ namespace FilmSeriesLogs
 					Seasons = prompt.Seasons,
 				});
 		}
-		private void toolStripBtnScrollTop_Click(object sender, EventArgs e)
-		{
-			if (dgvSeriesList.RowCount > 0)
-				dgvSeriesList.FirstDisplayedScrollingRowIndex = 0;
-			dgvSeriesList.ClearSelection();
-		}
-		private void toolStripBtnScrollBottom_Click(object sender, EventArgs e)
-		{
-			if (dgvSeriesList.RowCount > 0)
-				dgvSeriesList.FirstDisplayedScrollingRowIndex = dgvSeriesList.RowCount - 1;
-		}
+		private void toolStripBtnScrollTop_Click(object sender, EventArgs e) => userControlDGV.ScrollTop();
+		private void toolStripBtnScrollBottom_Click(object sender, EventArgs e) => userControlDGV.ScrollBottom();
 	}
 }
