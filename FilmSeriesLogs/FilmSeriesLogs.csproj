@@ -59,11 +59,11 @@
       <DependentUpon>AboutMeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ConvertExtension.cs" />
-    <Compile Include="DataGridViewSeriesList.cs">
+    <Compile Include="UserControlDGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DataGridViewSeriesList.Designer.cs">
-      <DependentUpon>DataGridViewSeriesList.cs</DependentUpon>
+    <Compile Include="UserControlDGV.Designer.cs">
+      <DependentUpon>UserControlDGV.cs</DependentUpon>
     </Compile>
     <Compile Include="EditForm.cs">
       <SubType>Form</SubType>
@@ -77,11 +77,11 @@
     <Compile Include="FilteredForm.Designer.cs">
       <DependentUpon>FilteredForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FilterForm.cs">
+    <Compile Include="FilterPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FilterForm.Designer.cs">
-      <DependentUpon>FilterForm.cs</DependentUpon>
+    <Compile Include="FilterPrompt.Designer.cs">
+      <DependentUpon>FilterPrompt.cs</DependentUpon>
     </Compile>
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
@@ -110,8 +110,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeriesAdapted.cs" />
-    <EmbeddedResource Include="DataGridViewSeriesList.resx">
-      <DependentUpon>DataGridViewSeriesList.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlDGV.resx">
+      <DependentUpon>UserControlDGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="FilteredForm.resx">
       <DependentUpon>FilteredForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FilterForm.resx">
-      <DependentUpon>FilterForm.cs</DependentUpon>
+    <EmbeddedResource Include="FilterPrompt.resx">
+      <DependentUpon>FilterPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
