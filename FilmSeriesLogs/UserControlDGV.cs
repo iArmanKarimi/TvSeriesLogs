@@ -82,6 +82,8 @@ namespace FilmSeriesLogs
 		}
 		private void NotesOfSeries(DataGridViewRow row) => new NotImplementedException();
 
+		#endregion
+
 		/// <summary>Adds new series to db & updates UI</summary>
 		public void AddNewSeries(Series series)
 		{
@@ -122,7 +124,19 @@ namespace FilmSeriesLogs
 			//Loading(false);
 		}
 		public void BindAllDbToDgv() => BindData(db.GetAll);
-		#endregion
+		public void ScrollTop()
+		{
+			if (dgv.RowCount > 0)
+			{
+				dgv.FirstDisplayedScrollingRowIndex = 0;
+				dgv.ClearSelection();
+			}
+		}
+		public void ScrollBottom()
+		{
+			if (dgv.RowCount > 0)
+				dgv.FirstDisplayedScrollingRowIndex = dgv.RowCount - 1;
+		}
 
 		private void dgvSeriesList_KeyDown(object sender, KeyEventArgs e)
 		{
