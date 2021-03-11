@@ -132,7 +132,7 @@ namespace FilmSeriesLogs
             this.toolStripBtnScrollBottom,
             this.toolStripSeparator1,
             this.toolStripBtnSettings});
-			this.toolStrip.Location = new System.Drawing.Point(0, 320);
+			this.toolStrip.Location = new System.Drawing.Point(0, 286);
 			this.toolStrip.Name = "toolStrip";
 			this.toolStrip.Size = new System.Drawing.Size(570, 39);
 			this.toolStrip.TabIndex = 14;
@@ -216,7 +216,7 @@ namespace FilmSeriesLogs
 			this.userControlDGV.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.userControlDGV.Location = new System.Drawing.Point(0, 0);
 			this.userControlDGV.Name = "userControlDGV";
-			this.userControlDGV.Size = new System.Drawing.Size(570, 320);
+			this.userControlDGV.Size = new System.Drawing.Size(570, 286);
 			this.userControlDGV.TabIndex = 15;
 			// 
 			// MainForm
@@ -224,13 +224,14 @@ namespace FilmSeriesLogs
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.ClientSize = new System.Drawing.Size(570, 359);
+			this.ClientSize = new System.Drawing.Size(570, 325);
 			this.Controls.Add(this.userControlDGV);
 			this.Controls.Add(this.toolStrip);
 			this.KeyPreview = true;
+			this.MinimumSize = new System.Drawing.Size(50, 50);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Record of series";
+			this.Text = "Film series logs";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
