@@ -17,6 +17,7 @@ Note that you are not limited, and it could be generally used for literally any 
 ## Graphics
 
 Icons: [icons8](https://icons8.com)
+
 Logo: [@iArmann](https://github.com/iArmann) - all rights reserved (c) 2021
 
 ### License
