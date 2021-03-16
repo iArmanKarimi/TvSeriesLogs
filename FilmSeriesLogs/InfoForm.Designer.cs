@@ -137,7 +137,7 @@ namespace FilmSeriesLogs
 			this.groupBoxSchedule.Size = new System.Drawing.Size(294, 217);
 			this.groupBoxSchedule.TabIndex = 17;
 			this.groupBoxSchedule.TabStop = false;
-			this.groupBoxSchedule.Text = "Next show schedule";
+			this.groupBoxSchedule.Text = "Next show\'s schedule";
 			// 
 			// txtboxScheduleInterruptionTime
 			// 
