@@ -227,6 +227,7 @@ namespace FilmSeriesLogs
 			this.ClientSize = new System.Drawing.Size(570, 325);
 			this.Controls.Add(this.userControlDGV);
 			this.Controls.Add(this.toolStrip);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.MinimumSize = new System.Drawing.Size(50, 50);
 			this.Name = "MainForm";

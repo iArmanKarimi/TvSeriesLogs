@@ -248,7 +248,10 @@
     <None Include="Resources\icons8_star_filled.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="todo.txt" />
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Todo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
