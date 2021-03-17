@@ -4,6 +4,8 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Collections.Generic;
+using System.IO;
+using System.Diagnostics;
 
 namespace TvSeriesLogsDb
 {
@@ -12,10 +14,14 @@ namespace TvSeriesLogsDb
 		private LiteDatabase db;
 		private ILiteCollection<Series> collection;
 		private const string FILE = "series.db";
+		private const string APP_NAME = "TvSeriesLogs";
 		private const string COLL_SERIES = "series";
+		private string PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 		public SeriesDb()
 		{
-			db = new LiteDatabase(FILE);
+			if (!Debugger.IsAttached)
+				Directory.CreateDirectory(Path.Combine(PATH, APP_NAME));
+			db = new LiteDatabase(Debugger.IsAttached ? FILE : Path.Combine(PATH, APP_NAME, FILE));
 			collection = db.GetCollection<Series>(COLL_SERIES);
 			collection.EnsureIndex(c => c.Name);
 		}
