@@ -118,8 +118,7 @@ namespace TvSeriesLogs
 				var data = getData();
 				if (data.Count() > 0)
 					bindingSource.DataSource = data.AdaptAllSeries();
-				else
-					; // show a message saying: no item has been created yet
+				//else show a message saying: no item has been created yet
 			}));
 			//Loading(false);
 		}
