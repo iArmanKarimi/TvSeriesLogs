@@ -1,4 +1,4 @@
-<img src='/TvSeriesLogs/Resources/logo.svg' alt='logo' height='250px'>
+<img src='/TvSeriesLogs/Resources/Logo.svg' alt='logo' height='250px'>
 
 # TV Series Logs
 
