@@ -1,3 +1,5 @@
+<img src='/TvSeriesLogs/Resources/logo.svg' alt='logo' height='250px'>
+
 # TV Series Logs
 
 A desktop application that helps you to keep logs of various TV series of your choice.
