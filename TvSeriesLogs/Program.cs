@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace TvSeriesLogs
@@ -11,18 +12,12 @@ namespace TvSeriesLogs
 		[STAThread]
 		static void Main()
 		{
-			const bool DEBUG = true;
-			if (DEBUG)
+			if (Debugger.IsAttached) 
 				MainApp();
 			else
-				try
-				{
-					MainApp();
-				}
+				try { MainApp(); }
 				catch (Exception e)
-				{
-					MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				};
+				{ MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 		}
 		static void MainApp()
 		{
