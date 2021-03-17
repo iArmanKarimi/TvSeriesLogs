@@ -232,7 +232,7 @@ namespace TvSeriesLogs
 			this.MinimumSize = new System.Drawing.Size(50, 50);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Film series logs";
+			this.Text = "TvSeriesLogs";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
