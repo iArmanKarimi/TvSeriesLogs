@@ -251,6 +251,7 @@
     <None Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\logo.svg" />
     <Content Include="Todo.txt" />
   </ItemGroup>
   <ItemGroup>
