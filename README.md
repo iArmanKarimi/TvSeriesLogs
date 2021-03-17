@@ -1,4 +1,4 @@
-# Film Series Logs
+# TV Series Logs
 
 A desktop application that helps you to keep logs of various TV series of your choice.
 
@@ -18,8 +18,8 @@ Note that you are not limited, and it could be generally used for literally any 
 
 Icons: [icons8](https://icons8.com)
 
-Logo: [@iArmann](https://github.com/iArmann) - all rights reserved (c) 2021
+Logo: [@iArmann](https://github.com/iArmann) - All rights reserved (c) 2021 Arman karimi
 
 ### License
 
-[MIT](https://github.com/iArmann/FilmSeriesLogs/blob/master/LICENSE?raw=true)
+[MIT](https://github.com/iArmann/TvSeriesLogs/blob/master/LICENSE?raw=true)
