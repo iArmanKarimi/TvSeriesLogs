@@ -41,8 +41,12 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -248,9 +252,7 @@
     <None Include="Resources\icons8_star_filled.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.ico" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Resources\logo.ico" />
     <Content Include="Resources\logo.svg" />
     <Content Include="Todo.txt" />
   </ItemGroup>
