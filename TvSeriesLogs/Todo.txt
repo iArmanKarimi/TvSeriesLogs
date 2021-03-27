@@ -1,0 +1,68 @@
+ x Icon for form
+ 
+ * DGV user control
+	* Fix: Shortcuts aren't shown (for delete icon, etc)
+ 
+ * All Forms: set min width/height, by an event handler on window resize
+
+ * Favorites: requires dgv implemented user control 
+
+ * Ordering functionality. this either requires dgv implemented user control or on the main dgv
+	* add a button in toolstrip that'll show a dialog with:
+		* combo box of items that support ordering
+		* radio button: ascending/descending
+
+ + Asynchronize updating of dgv
+	* Fully Advanded Asynchronized updating of dgv
+
+ * maybe: add fav column to show if the item is favorite
+
+ * DGV User control: use it in filter form and other required parts.
+
+ * Save customizations: save them in an xml file or db
+
+ + edit form
+	x Implement it
+	* develop UI
+
+ + info form
+	x Implement it
+	* develop UI
+	
+ * settings (theme, customize, etc) put the trigger button in toolstrip 
+	* clear all records (ask again firmly)
+	* background color of dataGridView
+	* Other coloring or themes
+	* don't ask for deleting series option
+	* option, always convert first letter to upper-case when creating an item
+	* maybe: 
+		* user can change column's order, an option to save that order by using columns display index. 
+			* Ex: dgvSeriesList.Columns[0].DisplayIndex = 1;
+			
+ * statistics (stats) e.g. watched, total series, etc. put the trigger button in toolstrip or in dgv
+	* Use a graph or diagram
+	
+MainForm:
+	* maybe: add a button for 
+
+EditForm
+ * Add an option for interruption & StartsAt inputs to be null (user can choose it not to have any value).
+ * Add a panel for details.
+ * Add textbox in Schedule panel for adding notes on the current episode. Episode note:... 
+ 
+* change background of EditForm InfoForm,,, give it some style perhaps
+* FilteredForm:
+	* update main form's dgv after closing search result:
+	recognise any changes, if true -> signal update; else ignore
+	how to recognise?
+	> at FilteredForm, after getting the result from EditForm, set it as signal to be received by MainForm
+	
+Edit Form:
+	* replace: 
+		* "Seasons" with "Total seasons"
+		* "starts at" with "See next episode at: "
+		* "Next show's schedule" with "Scheduling"
+		* "Season" with "Current Season" 
+		* "Episode" with "Next Episode"
+	* Panel for "Number of times watched":	
+		* only shown when status == watched (put it at the bottom, so user wouldn't notice the empty space)

@@ -22,6 +22,6 @@ Icons: [icons8](https://icons8.com)
 
 Logo: [@iArmann](https://github.com/iArmann) - All rights reserved (c) 2021 Arman karimi
 
-### License
+## License
 
 [MIT](https://github.com/iArmann/TvSeriesLogs/blob/master/LICENSE?raw=true)
