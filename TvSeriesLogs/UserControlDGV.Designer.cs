@@ -93,7 +93,7 @@ namespace TvSeriesLogs
 			this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Console", 10F);
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F);
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
