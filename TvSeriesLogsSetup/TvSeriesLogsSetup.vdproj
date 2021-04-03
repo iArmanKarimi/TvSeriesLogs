@@ -21,30 +21,30 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_869AB56885D2F1BCC2C88EA2B0AC6409"
-        "OwnerKey" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_869AB56885D2F1BCC2C88EA2B0AC6409"
-        "OwnerKey" = "8:_EE328A95F22247519C1D1E55AB936806"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EE328A95F22247519C1D1E55AB936806"
-        "OwnerKey" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FC397DCD33A5462BBBD1B673D0972CCA"
+        "MsmKey" = "8:_574B22BC51B24C37AF9865A2A1259F07"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_74AD099D41C7BBBEBC3FF71369F37D04"
+        "OwnerKey" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_74AD099D41C7BBBEBC3FF71369F37D04"
+        "OwnerKey" = "8:_EB1896F2680C8376235CFECD896F4CA8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EB1896F2680C8376235CFECD896F4CA8"
+        "OwnerKey" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,13 +52,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EE328A95F22247519C1D1E55AB936806"
+        "OwnerKey" = "8:_EB1896F2680C8376235CFECD896F4CA8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_869AB56885D2F1BCC2C88EA2B0AC6409"
+        "OwnerKey" = "8:_74AD099D41C7BBBEBC3FF71369F37D04"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -120,10 +120,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.2"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    "Name" = "8:Microsoft .NET Framework 4.5.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.2"
                     }
                 }
             }
@@ -156,14 +156,34 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_869AB56885D2F1BCC2C88EA2B0AC6409"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_574B22BC51B24C37AF9865A2A1259F07"
+            {
+            "SourcePath" = "8:..\\TvSeriesLogs\\Resources\\logo128.ico"
+            "TargetName" = "8:logo128.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_B23E408363F4444FA552643C8B5C42BF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_74AD099D41C7BBBEBC3FF71369F37D04"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:LiteDB, Version=5.0.10.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_869AB56885D2F1BCC2C88EA2B0AC6409"
+                    "_74AD099D41C7BBBEBC3FF71369F37D04"
                     {
                     "Name" = "8:LiteDB.dll"
                     "Attributes" = "3:512"
@@ -187,14 +207,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EE328A95F22247519C1D1E55AB936806"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EB1896F2680C8376235CFECD896F4CA8"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:TvSeriesRecordsDb, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_EE328A95F22247519C1D1E55AB936806"
+                    "_EB1896F2680C8376235CFECD896F4CA8"
                     {
                     "Name" = "8:TvSeriesRecordsDb.dll"
                     "Attributes" = "3:512"
@@ -216,26 +236,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC397DCD33A5462BBBD1B673D0972CCA"
-            {
-            "SourcePath" = "8:C:\\Users\\lenovo\\Downloads\\icon\\adju3-aod6j-007.ico"
-            "TargetName" = "8:logo.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_B23E408363F4444FA552643C8B5C42BF"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -295,7 +295,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TvSeriesLogsSetup"
         "ProductCode" = "8:{566FBEEB-B32B-4977-8E8D-98F9DDE5FFF0}"
-        "PackageCode" = "8:{78BFDB10-5DDE-4B12-8C50-BADC14927E00}"
+        "PackageCode" = "8:{9895227F-88C0-40EC-9B48-DFC0F6809C0B}"
         "UpgradeCode" = "8:{E9CA2321-C85C-4667-8AEA-63A217E8B625}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -312,7 +312,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Keep logs of various TV series of your choice.\r\n\r\n"
         "ARPURLINFOABOUT" = "8:https://github.com/iArmann"
-        "ARPPRODUCTICON" = "8:_FC397DCD33A5462BBBD1B673D0972CCA"
+        "ARPPRODUCTICON" = "8:_574B22BC51B24C37AF9865A2A1259F07"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -426,7 +426,7 @@
             "Target" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
             "Folder" = "8:_26747C9AC8754A08B20C19172AA5992D"
             "WorkingFolder" = "8:_B23E408363F4444FA552643C8B5C42BF"
-            "Icon" = "8:_FC397DCD33A5462BBBD1B673D0972CCA"
+            "Icon" = "8:_574B22BC51B24C37AF9865A2A1259F07"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_219C80F41D984E42A5EBA29A1E132257"
@@ -440,7 +440,7 @@
             "Target" = "8:_4B1680CE4FA241F896C1E5B4D1C87F91"
             "Folder" = "8:_D36B98E7C88B42F8BDAE6B1081CD2810"
             "WorkingFolder" = "8:_B23E408363F4444FA552643C8B5C42BF"
-            "Icon" = "8:_FC397DCD33A5462BBBD1B673D0972CCA"
+            "Icon" = "8:_574B22BC51B24C37AF9865A2A1259F07"
             "Feature" = "8:"
             }
         }
