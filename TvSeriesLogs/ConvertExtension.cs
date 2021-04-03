@@ -24,6 +24,7 @@ namespace TvSeriesLogs
 					return SeenStatus.NotSeen;
 			}
 		}
+
 		public static CheckState ToCheckState(this SeenStatus status)
 		{
 			switch (status)
@@ -38,9 +39,12 @@ namespace TvSeriesLogs
 					return CheckState.Unchecked;
 			}
 		}
+
 		public static SeriesAdapted AdaptSeries(this Series series) => new SeriesAdapted(series);
-		public static IEnumerable<SeriesAdapted> AdaptAllSeries(this IEnumerable<Series> series) => 
-			series.Select(item => new SeriesAdapted(item));
+
+		public static IEnumerable<SeriesAdapted> AdaptAllSeries(this IEnumerable<Series> series) 
+			=> series.Select(item => new SeriesAdapted(item));
+
 		public static CheckState ToCheckState(this ComboBox comboBox)
 		{
 			switch (comboBox.SelectedIndex)
@@ -55,6 +59,7 @@ namespace TvSeriesLogs
 					return CheckState.Unchecked;
 			}
 		}
+
 		public static int ToComboBoxItem(this CheckState state)
 		{
 			switch (state)
@@ -69,6 +74,7 @@ namespace TvSeriesLogs
 					return 0;
 			}
 		}
+
 		public static string ToFormString(this SeenStatus status)
 		{
 			switch (status)
