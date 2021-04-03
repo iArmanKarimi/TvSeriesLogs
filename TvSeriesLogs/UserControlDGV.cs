@@ -31,7 +31,8 @@ namespace TvSeriesLogs
 			public const string Info = c + "Info";
 			public const string Notes = c + "Notes";
 			public const string Delete = c + "Delete";
-			public const string Seasons = c + "Seasons";
+			public const string Season = c + "Season";
+			public const string Episode = c + "Episode";
 		}
 		// IMPLEMENT ME //
 		//private void Loading(bool on) => lblLoading.Visible = on;
@@ -89,8 +90,9 @@ namespace TvSeriesLogs
 		{
 			bool existsExcludingId = db.Exists(s =>
 				s.Name == series.Name &&
-				s.Status == series.Status &&
-				s.Seasons == series.Seasons
+				s.Status == series.Status 
+				//s.Schedule.Season == series.Schedule.Season &&
+				//s.Schedule.Episode == series.Schedule.Episode
 			);
 			if (existsExcludingId)
 			{
@@ -118,6 +120,7 @@ namespace TvSeriesLogs
 				var data = getData();
 				if (data.Count() > 0)
 					bindingSource.DataSource = data.AdaptAllSeries();
+				var episode_season = data.Select(s => new { s.Schedule.Season, s.Schedule.Episode });
 				//else show a message saying: no item has been created yet
 			}));
 			//Loading(false);
@@ -162,7 +165,10 @@ namespace TvSeriesLogs
 		}
 		private void dataGridSeriesList_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
 		{
-			if (dgv.Columns[ColNames.Seasons].Index == e.Column.Index)
+			bool targetIntSortable = dgv.Columns[ColNames.Season].Index == e.Column.Index
+				|| dgv.Columns[ColNames.Episode].Index == e.Column.Index;
+
+			if (targetIntSortable)
 			{
 				e.SortResult = int.Parse(e.CellValue1.ToString()).CompareTo(int.Parse(e.CellValue2.ToString()));
 				e.Handled = true;

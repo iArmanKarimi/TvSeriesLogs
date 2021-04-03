@@ -30,24 +30,26 @@ namespace TvSeriesLogs
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDGV));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgv = new System.Windows.Forms.DataGridView();
+			this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ColumnSeasons = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ColumnSeason = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ColumnEpisode = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ColumnSeen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-			this.ColumnDelete = new System.Windows.Forms.DataGridViewImageColumn();
-			this.ColumnEdit = new System.Windows.Forms.DataGridViewImageColumn();
 			this.ColumnInfo = new System.Windows.Forms.DataGridViewImageColumn();
+			this.ColumnEdit = new System.Windows.Forms.DataGridViewImageColumn();
+			this.ColumnDelete = new System.Windows.Forms.DataGridViewImageColumn();
 			this.ColumnNotes = new System.Windows.Forms.DataGridViewImageColumn();
 			this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
 			this.SuspendLayout();
@@ -63,11 +65,12 @@ namespace TvSeriesLogs
 			this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnName,
-            this.ColumnSeasons,
+            this.ColumnSeason,
+            this.ColumnEpisode,
             this.ColumnSeen,
-            this.ColumnDelete,
-            this.ColumnEdit,
             this.ColumnInfo,
+            this.ColumnEdit,
+            this.ColumnDelete,
             this.ColumnNotes,
             this.ColumnId});
 			this.dgv.DataSource = this.bindingSource;
@@ -88,13 +91,13 @@ namespace TvSeriesLogs
 			// ColumnName
 			// 
 			this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle36.BackColor = System.Drawing.Color.Azure;
-			dataGridViewCellStyle36.Font = new System.Drawing.Font("Fira Code SemiBold", 9F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnName.DefaultCellStyle = dataGridViewCellStyle36;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Console", 10F);
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.ColumnName.DefaultCellStyle = dataGridViewCellStyle1;
 			this.ColumnName.FillWeight = 91.57754F;
 			this.ColumnName.HeaderText = "Name";
 			this.ColumnName.MinimumWidth = 6;
@@ -102,34 +105,46 @@ namespace TvSeriesLogs
 			this.ColumnName.ReadOnly = true;
 			this.ColumnName.ToolTipText = "Name of the series";
 			// 
-			// ColumnSeasons
+			// ColumnSeason
 			// 
-			dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			dataGridViewCellStyle37.Font = new System.Drawing.Font("Consolas", 11F);
-			dataGridViewCellStyle37.Format = "N0";
-			dataGridViewCellStyle37.NullValue = "0";
-			dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-			dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			this.ColumnSeasons.DefaultCellStyle = dataGridViewCellStyle37;
-			this.ColumnSeasons.FillWeight = 30F;
-			this.ColumnSeasons.HeaderText = "Seasons";
-			this.ColumnSeasons.MaxInputLength = 5;
-			this.ColumnSeasons.MinimumWidth = 67;
-			this.ColumnSeasons.Name = "ColumnSeasons";
-			this.ColumnSeasons.ReadOnly = true;
-			this.ColumnSeasons.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnSeasons.ToolTipText = "Number of seasons";
-			this.ColumnSeasons.Width = 67;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 11F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+			this.ColumnSeason.DefaultCellStyle = dataGridViewCellStyle2;
+			this.ColumnSeason.HeaderText = "Season";
+			this.ColumnSeason.MinimumWidth = 6;
+			this.ColumnSeason.Name = "ColumnSeason";
+			this.ColumnSeason.ReadOnly = true;
+			this.ColumnSeason.ToolTipText = "Current season";
+			this.ColumnSeason.Width = 60;
+			// 
+			// ColumnEpisode
+			// 
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 11F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			this.ColumnEpisode.DefaultCellStyle = dataGridViewCellStyle3;
+			this.ColumnEpisode.HeaderText = "Episode";
+			this.ColumnEpisode.MinimumWidth = 6;
+			this.ColumnEpisode.Name = "ColumnEpisode";
+			this.ColumnEpisode.ReadOnly = true;
+			this.ColumnEpisode.ToolTipText = "Current episode";
+			this.ColumnEpisode.Width = 63;
 			// 
 			// ColumnSeen
 			// 
-			dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			dataGridViewCellStyle38.NullValue = System.Windows.Forms.CheckState.Indeterminate;
-			dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Black;
-			this.ColumnSeen.DefaultCellStyle = dataGridViewCellStyle38;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			dataGridViewCellStyle4.NullValue = System.Windows.Forms.CheckState.Indeterminate;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+			this.ColumnSeen.DefaultCellStyle = dataGridViewCellStyle4;
 			this.ColumnSeen.FalseValue = "0";
 			this.ColumnSeen.FillWeight = 35F;
 			this.ColumnSeen.HeaderText = "Seen";
@@ -144,32 +159,31 @@ namespace TvSeriesLogs
 			this.ColumnSeen.TrueValue = "2";
 			this.ColumnSeen.Width = 50;
 			// 
-			// ColumnDelete
+			// ColumnInfo
 			// 
-			dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			dataGridViewCellStyle39.NullValue = null;
-			dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.MistyRose;
-			this.ColumnDelete.DefaultCellStyle = dataGridViewCellStyle39;
-			this.ColumnDelete.FillWeight = 40F;
-			this.ColumnDelete.HeaderText = "Del";
-			this.ColumnDelete.Image = ((System.Drawing.Image)(resources.GetObject("ColumnDelete.Image")));
-			this.ColumnDelete.MinimumWidth = 40;
-			this.ColumnDelete.Name = "ColumnDelete";
-			this.ColumnDelete.ReadOnly = true;
-			this.ColumnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnDelete.ToolTipText = "Delete";
-			this.ColumnDelete.Width = 40;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.NullValue = null;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(255)))));
+			this.ColumnInfo.DefaultCellStyle = dataGridViewCellStyle5;
+			this.ColumnInfo.HeaderText = "Info";
+			this.ColumnInfo.Image = ((System.Drawing.Image)(resources.GetObject("ColumnInfo.Image")));
+			this.ColumnInfo.MinimumWidth = 40;
+			this.ColumnInfo.Name = "ColumnInfo";
+			this.ColumnInfo.ReadOnly = true;
+			this.ColumnInfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.ColumnInfo.ToolTipText = "Information about series";
+			this.ColumnInfo.Width = 40;
 			// 
 			// ColumnEdit
 			// 
-			dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle40.BackColor = System.Drawing.Color.PapayaWhip;
-			dataGridViewCellStyle40.NullValue = null;
-			dataGridViewCellStyle40.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-			dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.NavajoWhite;
-			dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black;
-			this.ColumnEdit.DefaultCellStyle = dataGridViewCellStyle40;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.PapayaWhip;
+			dataGridViewCellStyle6.NullValue = null;
+			dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.NavajoWhite;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+			this.ColumnEdit.DefaultCellStyle = dataGridViewCellStyle6;
 			this.ColumnEdit.FillWeight = 35F;
 			this.ColumnEdit.HeaderText = "Edit";
 			this.ColumnEdit.Image = ((System.Drawing.Image)(resources.GetObject("ColumnEdit.Image")));
@@ -180,21 +194,22 @@ namespace TvSeriesLogs
 			this.ColumnEdit.ToolTipText = "Edit";
 			this.ColumnEdit.Width = 45;
 			// 
-			// ColumnInfo
+			// ColumnDelete
 			// 
-			dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle41.NullValue = null;
-			dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(255)))));
-			this.ColumnInfo.DefaultCellStyle = dataGridViewCellStyle41;
-			this.ColumnInfo.HeaderText = "Info";
-			this.ColumnInfo.Image = ((System.Drawing.Image)(resources.GetObject("ColumnInfo.Image")));
-			this.ColumnInfo.MinimumWidth = 40;
-			this.ColumnInfo.Name = "ColumnInfo";
-			this.ColumnInfo.ReadOnly = true;
-			this.ColumnInfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.ColumnInfo.ToolTipText = "Information about series";
-			this.ColumnInfo.Width = 40;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			dataGridViewCellStyle7.NullValue = null;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MistyRose;
+			this.ColumnDelete.DefaultCellStyle = dataGridViewCellStyle7;
+			this.ColumnDelete.FillWeight = 40F;
+			this.ColumnDelete.HeaderText = "Del";
+			this.ColumnDelete.Image = ((System.Drawing.Image)(resources.GetObject("ColumnDelete.Image")));
+			this.ColumnDelete.MinimumWidth = 40;
+			this.ColumnDelete.Name = "ColumnDelete";
+			this.ColumnDelete.ReadOnly = true;
+			this.ColumnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.ColumnDelete.ToolTipText = "Delete";
+			this.ColumnDelete.Width = 40;
 			// 
 			// ColumnNotes
 			// 
@@ -209,9 +224,9 @@ namespace TvSeriesLogs
 			// 
 			// ColumnId
 			// 
-			dataGridViewCellStyle42.Format = "N0";
-			dataGridViewCellStyle42.NullValue = null;
-			this.ColumnId.DefaultCellStyle = dataGridViewCellStyle42;
+			dataGridViewCellStyle8.Format = "N0";
+			dataGridViewCellStyle8.NullValue = null;
+			this.ColumnId.DefaultCellStyle = dataGridViewCellStyle8;
 			this.ColumnId.HeaderText = "Id";
 			this.ColumnId.MaxInputLength = 100;
 			this.ColumnId.MinimumWidth = 6;
@@ -236,14 +251,15 @@ namespace TvSeriesLogs
 		#endregion
 
 		private System.Windows.Forms.DataGridView dgv;
+		private System.Windows.Forms.BindingSource bindingSource;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSeasons;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSeason;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEpisode;
 		private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSeen;
-		private System.Windows.Forms.DataGridViewImageColumn ColumnDelete;
-		private System.Windows.Forms.DataGridViewImageColumn ColumnEdit;
 		private System.Windows.Forms.DataGridViewImageColumn ColumnInfo;
+		private System.Windows.Forms.DataGridViewImageColumn ColumnEdit;
+		private System.Windows.Forms.DataGridViewImageColumn ColumnDelete;
 		private System.Windows.Forms.DataGridViewImageColumn ColumnNotes;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
-		private System.Windows.Forms.BindingSource bindingSource;
 	}
 }
