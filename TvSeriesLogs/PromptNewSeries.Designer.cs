@@ -141,7 +141,7 @@ namespace TvSeriesLogs
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.KeyPreview = true;
 			this.Name = "PromptNewSeries";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Add new series";
 			this.Shown += new System.EventHandler(this.PromptNewSeries_Shown);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PromptNewSeries_KeyDown);

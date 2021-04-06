@@ -48,7 +48,7 @@ namespace TvSeriesLogs
 			this.Controls.Add(this.userControlDGV);
 			this.KeyPreview = true;
 			this.Name = "FilteredForm";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Search result";
 			this.Shown += new System.EventHandler(this.FilteredForm_Shown);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FilteredForm_KeyDown);
