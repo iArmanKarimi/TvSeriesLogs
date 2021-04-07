@@ -78,9 +78,10 @@ namespace TvSeriesLogs
 			// 
 			// txtboxName
 			// 
+			this.txtboxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
 			this.txtboxName.Location = new System.Drawing.Point(62, 8);
 			this.txtboxName.Name = "txtboxName";
-			this.txtboxName.Size = new System.Drawing.Size(334, 22);
+			this.txtboxName.Size = new System.Drawing.Size(334, 24);
 			this.txtboxName.TabIndex = 1;
 			// 
 			// label2
@@ -222,7 +223,7 @@ namespace TvSeriesLogs
 			// numericUpDownScheduleEpisode
 			// 
 			this.numericUpDownScheduleEpisode.Font = new System.Drawing.Font("Consolas", 10.2F);
-			this.numericUpDownScheduleEpisode.Location = new System.Drawing.Point(123, 68);
+			this.numericUpDownScheduleEpisode.Location = new System.Drawing.Point(149, 67);
 			this.numericUpDownScheduleEpisode.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -235,7 +236,7 @@ namespace TvSeriesLogs
 			// numericUpDownScheduleSeasons
 			// 
 			this.numericUpDownScheduleSeasons.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.numericUpDownScheduleSeasons.Location = new System.Drawing.Point(123, 30);
+			this.numericUpDownScheduleSeasons.Location = new System.Drawing.Point(165, 28);
 			this.numericUpDownScheduleSeasons.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -266,20 +267,20 @@ namespace TvSeriesLogs
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(57, 71);
+			this.label5.Location = new System.Drawing.Point(48, 71);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(63, 17);
+			this.label5.Size = new System.Drawing.Size(95, 17);
 			this.label5.TabIndex = 2;
-			this.label5.Text = "Episode:";
+			this.label5.Text = "Next Episode:";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(57, 35);
+			this.label4.Location = new System.Drawing.Point(48, 33);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(60, 17);
+			this.label4.Size = new System.Drawing.Size(111, 17);
 			this.label4.TabIndex = 1;
-			this.label4.Text = "Season:";
+			this.label4.Text = "Current Season:";
 			// 
 			// timerAnimateSavedNotification
 			// 
@@ -374,7 +375,7 @@ namespace TvSeriesLogs
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(619, 348);
+			this.ClientSize = new System.Drawing.Size(619, 353);
 			this.Controls.Add(this.btnFavorite);
 			this.Controls.Add(this.groupBoxDetail);
 			this.Controls.Add(this.label3);
