@@ -300,7 +300,7 @@ namespace TvSeriesLogs
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.KeyPreview = true;
 			this.Name = "InfoForm";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Info";
 			this.Shown += new System.EventHandler(this.InfoForm_Shown);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InfoForm_KeyDown);

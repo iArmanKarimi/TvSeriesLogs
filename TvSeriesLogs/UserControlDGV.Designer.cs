@@ -118,6 +118,7 @@ namespace TvSeriesLogs
 			this.ColumnSeason.MinimumWidth = 6;
 			this.ColumnSeason.Name = "ColumnSeason";
 			this.ColumnSeason.ReadOnly = true;
+			this.ColumnSeason.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.ColumnSeason.ToolTipText = "Current season";
 			this.ColumnSeason.Width = 60;
 			// 
@@ -134,6 +135,7 @@ namespace TvSeriesLogs
 			this.ColumnEpisode.MinimumWidth = 6;
 			this.ColumnEpisode.Name = "ColumnEpisode";
 			this.ColumnEpisode.ReadOnly = true;
+			this.ColumnEpisode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.ColumnEpisode.ToolTipText = "Current episode";
 			this.ColumnEpisode.Width = 63;
 			// 
