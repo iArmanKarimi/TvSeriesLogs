@@ -38,7 +38,7 @@ namespace TvSeriesLogs
 			this.label3 = new System.Windows.Forms.Label();
 			this.numericUpDownSeasons = new System.Windows.Forms.NumericUpDown();
 			this.btnSave = new System.Windows.Forms.Button();
-			this.groupBoxSchedule = new System.Windows.Forms.GroupBox();
+			this.groupBoxScheduling = new System.Windows.Forms.GroupBox();
 			this.btnResetScheduleStartsAt = new System.Windows.Forms.Button();
 			this.btnResetScheduleInterruptionTime = new System.Windows.Forms.Button();
 			this.dateTimePickerShowStartsAtTime = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +51,7 @@ namespace TvSeriesLogs
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.timerAnimateSavedNotification = new System.Windows.Forms.Timer(this.components);
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.groupBoxDetail = new System.Windows.Forms.GroupBox();
 			this.numericUpDownTimesWatched = new System.Windows.Forms.NumericUpDown();
 			this.label10 = new System.Windows.Forms.Label();
 			this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
@@ -60,10 +60,10 @@ namespace TvSeriesLogs
 			this.richTextBoxGenres = new System.Windows.Forms.RichTextBox();
 			this.btnFavorite = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).BeginInit();
-			this.groupBoxSchedule.SuspendLayout();
+			this.groupBoxScheduling.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleEpisode)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleSeasons)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.groupBoxDetail.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownTimesWatched)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -108,6 +108,7 @@ namespace TvSeriesLogs
 			this.comboBoxStatus.Name = "comboBoxStatus";
 			this.comboBoxStatus.Size = new System.Drawing.Size(127, 24);
 			this.comboBoxStatus.TabIndex = 2;
+			this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
 			// 
 			// label3
 			// 
@@ -144,25 +145,25 @@ namespace TvSeriesLogs
 			this.btnSave.UseVisualStyleBackColor = false;
 			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
-			// groupBoxSchedule
+			// groupBoxScheduling
 			// 
-			this.groupBoxSchedule.Controls.Add(this.btnResetScheduleStartsAt);
-			this.groupBoxSchedule.Controls.Add(this.btnResetScheduleInterruptionTime);
-			this.groupBoxSchedule.Controls.Add(this.dateTimePickerShowStartsAtTime);
-			this.groupBoxSchedule.Controls.Add(this.dateTimePickerShowStartsAtDate);
-			this.groupBoxSchedule.Controls.Add(this.dateTimePickerInterruptionTime);
-			this.groupBoxSchedule.Controls.Add(this.numericUpDownScheduleEpisode);
-			this.groupBoxSchedule.Controls.Add(this.numericUpDownScheduleSeasons);
-			this.groupBoxSchedule.Controls.Add(this.label7);
-			this.groupBoxSchedule.Controls.Add(this.label6);
-			this.groupBoxSchedule.Controls.Add(this.label5);
-			this.groupBoxSchedule.Controls.Add(this.label4);
-			this.groupBoxSchedule.Location = new System.Drawing.Point(12, 90);
-			this.groupBoxSchedule.Name = "groupBoxSchedule";
-			this.groupBoxSchedule.Size = new System.Drawing.Size(311, 251);
-			this.groupBoxSchedule.TabIndex = 12;
-			this.groupBoxSchedule.TabStop = false;
-			this.groupBoxSchedule.Text = "Scheduling";
+			this.groupBoxScheduling.Controls.Add(this.btnResetScheduleStartsAt);
+			this.groupBoxScheduling.Controls.Add(this.btnResetScheduleInterruptionTime);
+			this.groupBoxScheduling.Controls.Add(this.dateTimePickerShowStartsAtTime);
+			this.groupBoxScheduling.Controls.Add(this.dateTimePickerShowStartsAtDate);
+			this.groupBoxScheduling.Controls.Add(this.dateTimePickerInterruptionTime);
+			this.groupBoxScheduling.Controls.Add(this.numericUpDownScheduleEpisode);
+			this.groupBoxScheduling.Controls.Add(this.numericUpDownScheduleSeasons);
+			this.groupBoxScheduling.Controls.Add(this.label7);
+			this.groupBoxScheduling.Controls.Add(this.label6);
+			this.groupBoxScheduling.Controls.Add(this.label5);
+			this.groupBoxScheduling.Controls.Add(this.label4);
+			this.groupBoxScheduling.Location = new System.Drawing.Point(12, 90);
+			this.groupBoxScheduling.Name = "groupBoxScheduling";
+			this.groupBoxScheduling.Size = new System.Drawing.Size(311, 251);
+			this.groupBoxScheduling.TabIndex = 12;
+			this.groupBoxScheduling.TabStop = false;
+			this.groupBoxScheduling.Text = "Scheduling";
 			// 
 			// btnResetScheduleStartsAt
 			// 
@@ -285,20 +286,20 @@ namespace TvSeriesLogs
 			this.timerAnimateSavedNotification.Interval = 1000;
 			this.timerAnimateSavedNotification.Tick += new System.EventHandler(this.timerAnimateSavedNotification_Tick);
 			// 
-			// groupBox1
+			// groupBoxDetail
 			// 
-			this.groupBox1.Controls.Add(this.numericUpDownTimesWatched);
-			this.groupBox1.Controls.Add(this.label10);
-			this.groupBox1.Controls.Add(this.richTextBoxDescription);
-			this.groupBox1.Controls.Add(this.label9);
-			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Controls.Add(this.richTextBoxGenres);
-			this.groupBox1.Location = new System.Drawing.Point(329, 90);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(282, 251);
-			this.groupBox1.TabIndex = 14;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Detail";
+			this.groupBoxDetail.Controls.Add(this.numericUpDownTimesWatched);
+			this.groupBoxDetail.Controls.Add(this.label10);
+			this.groupBoxDetail.Controls.Add(this.richTextBoxDescription);
+			this.groupBoxDetail.Controls.Add(this.label9);
+			this.groupBoxDetail.Controls.Add(this.label8);
+			this.groupBoxDetail.Controls.Add(this.richTextBoxGenres);
+			this.groupBoxDetail.Location = new System.Drawing.Point(329, 90);
+			this.groupBoxDetail.Name = "groupBoxDetail";
+			this.groupBoxDetail.Size = new System.Drawing.Size(282, 251);
+			this.groupBoxDetail.TabIndex = 14;
+			this.groupBoxDetail.TabStop = false;
+			this.groupBoxDetail.Text = "Detail";
 			// 
 			// numericUpDownTimesWatched
 			// 
@@ -375,9 +376,9 @@ namespace TvSeriesLogs
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(619, 348);
 			this.Controls.Add(this.btnFavorite);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.groupBoxDetail);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.groupBoxSchedule);
+			this.Controls.Add(this.groupBoxScheduling);
 			this.Controls.Add(this.numericUpDownSeasons);
 			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.comboBoxStatus);
@@ -393,12 +394,12 @@ namespace TvSeriesLogs
 			this.Shown += new System.EventHandler(this.EditForm_Shown);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EditForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeasons)).EndInit();
-			this.groupBoxSchedule.ResumeLayout(false);
-			this.groupBoxSchedule.PerformLayout();
+			this.groupBoxScheduling.ResumeLayout(false);
+			this.groupBoxScheduling.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleEpisode)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownScheduleSeasons)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.groupBoxDetail.ResumeLayout(false);
+			this.groupBoxDetail.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownTimesWatched)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -414,7 +415,7 @@ namespace TvSeriesLogs
 		private System.Windows.Forms.Label label3;
 		internal System.Windows.Forms.NumericUpDown numericUpDownSeasons;
 		private System.Windows.Forms.Button btnSave;
-		private System.Windows.Forms.GroupBox groupBoxSchedule;
+		private System.Windows.Forms.GroupBox groupBoxScheduling;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
@@ -427,7 +428,7 @@ namespace TvSeriesLogs
 		private System.Windows.Forms.Timer timerAnimateSavedNotification;
 		private System.Windows.Forms.Button btnResetScheduleInterruptionTime;
 		private System.Windows.Forms.Button btnResetScheduleStartsAt;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupBoxDetail;
 		private System.Windows.Forms.RichTextBox richTextBoxGenres;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;

@@ -137,5 +137,24 @@ namespace TvSeriesLogs
 		}
 		private void btnResetScheduleInterruptionTime_Click(object sender, EventArgs e) =>
 			dateTimePickerInterruptionTime.Value = DateTime.Today.Date;
+
+		private void comboBoxStatus_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			switch ((sender as ComboBox).ToCheckState().ToSeenState())
+			{
+				case TvSeriesLogsDb.Helper.SeenStatus.NotSeen:
+					groupBoxDetail.Enabled = false;
+					groupBoxScheduling.Enabled = false;
+					break;
+				case TvSeriesLogsDb.Helper.SeenStatus.Seeing:
+					groupBoxDetail.Enabled = false;
+					groupBoxScheduling.Enabled = true;
+					break;
+				case TvSeriesLogsDb.Helper.SeenStatus.Seen:
+					groupBoxDetail.Enabled = true;
+					groupBoxScheduling.Enabled = false;
+					break;
+			}
+		}
 	}
 }
