@@ -68,6 +68,12 @@
       <DependentUpon>AboutMeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ConvertExtension.cs" />
+    <Compile Include="FavoritesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoritesForm.Designer.cs">
+      <DependentUpon>FavoritesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlDGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeriesAdapted.cs" />
+    <EmbeddedResource Include="FavoritesForm.resx">
+      <DependentUpon>FavoritesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlDGV.resx">
       <DependentUpon>UserControlDGV.cs</DependentUpon>
     </EmbeddedResource>
