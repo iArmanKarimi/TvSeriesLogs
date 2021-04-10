@@ -31,6 +31,7 @@ namespace TvSeriesLogs
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilteredForm));
 			this.userControlDGV = new TvSeriesLogs.UserControlDGV();
 			this.SuspendLayout();
 			// 
@@ -46,6 +47,7 @@ namespace TvSeriesLogs
 			// 
 			this.ClientSize = new System.Drawing.Size(565, 317);
 			this.Controls.Add(this.userControlDGV);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.Name = "FilteredForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
