@@ -59,6 +59,7 @@ namespace TvSeriesLogsDb
 		/// <returns>false if document wasn't found in collection</returns>
 		public bool Update(int id, Series series) => collection.Update(id, series);
 		public IEnumerable<Series> GetAll() => collection.FindAll();
+		public IEnumerable<Series> Find(Expression<Func<Series, bool>> exp) => collection.Find(exp);
 		public IEnumerable<Series> Filter(string name, ushort limit, bool caseSensitive, bool orderByIndwx = true)
 		{
 			var items = GetAll();
