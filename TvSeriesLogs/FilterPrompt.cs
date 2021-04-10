@@ -21,13 +21,12 @@ namespace TvSeriesLogs
 
 		private void btnFilterSubmit_Click(object sender, EventArgs e)
 		{
-			if (!string.IsNullOrEmpty(SearchQuery))
-			{
-				Func<IEnumerable<Series>> getResult = () => db.Filter(SearchQuery, Limit, CaseSensitive);
-				ShowFilteredForm = new FilteredForm(db, SearchQuery, getResult).ShowDialog;
-				DialogResult = DialogResult.OK;
-				Close();
-			}
+			if (string.IsNullOrEmpty(SearchQuery)) return;
+
+			Func<IEnumerable<Series>> getResult = () => db.Filter(SearchQuery, Limit, CaseSensitive);
+			ShowFilteredForm = new FilteredForm(db, SearchQuery, getResult).ShowDialog;
+			DialogResult = DialogResult.OK;
+			Close();
 		}
 		private void FilterForm_KeyDown(object sender, KeyEventArgs e)
 		{

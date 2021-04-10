@@ -169,7 +169,7 @@ namespace TvSeriesLogs
 			this.toolStripBtnFavorites.Name = "toolStripBtnFavorites";
 			this.toolStripBtnFavorites.Size = new System.Drawing.Size(36, 36);
 			this.toolStripBtnFavorites.ToolTipText = "Show favorites";
-			this.toolStripBtnFavorites.Visible = false;
+			this.toolStripBtnFavorites.Click += new System.EventHandler(this.toolStripBtnFavorites_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -229,7 +229,7 @@ namespace TvSeriesLogs
 			this.Controls.Add(this.toolStrip);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
-			this.MinimumSize = new System.Drawing.Size(50, 50);
+			this.MinimumSize = new System.Drawing.Size(400, 180);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "TvSeriesLogs";

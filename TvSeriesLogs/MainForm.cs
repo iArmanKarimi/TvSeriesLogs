@@ -1,7 +1,8 @@
 ﻿using TvSeriesLogsDb;
 using System;
-using System.Linq;
 using System.Windows.Forms;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace TvSeriesLogs
 {
@@ -100,5 +101,7 @@ namespace TvSeriesLogs
 		}
 		private void toolStripBtnScrollTop_Click(object sender, EventArgs e) => userControlDGV.ScrollTop();
 		private void toolStripBtnScrollBottom_Click(object sender, EventArgs e) => userControlDGV.ScrollBottom();
+		private void toolStripBtnFavorites_Click(object sender, EventArgs e) =>
+			new FavoritesForm(db, () => db.Find(s => s.Detail.IsFavorite)).ShowDialog();
 	}
 }
